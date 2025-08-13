@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="情報セキュリティマネジメント試験（SG）の分野別問題演習。基礎知識、管理要素、技術要素、法規制度の問題で実力アップ。">
+    <meta name="keywords" content="情報セキュリティマネジメント試験,問題演習,分野別,練習問題,SG試験">
+    <title>分野別問題演習 | 情報セキュリティマネジメント試験 学習サイト</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/themes.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#1976d2">
+    
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon-16x16.png">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
+    <!-- Header with navigation -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="メインナビゲーション">
+            <div class="nav-brand">
+                <a href="../../" class="brand-link" aria-label="ホームページへ戻る">
+                    <img src="../../assets/images/logo.svg" alt="SG試験学習サイト" class="brand-logo">
+                    <span class="brand-text">SG試験学習サイト</span>
+                </a>
+            </div>
+            
+            <!-- Mobile menu toggle -->
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="ナビゲーションメニューを開く">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <!-- Navigation menu -->
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="../../" class="nav-link" role="menuitem">ホーム</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../exam-info/" class="nav-link" role="menuitem">試験情報</a>
+                </li>
+                <li class="nav-item nav-dropdown" role="none">
+                    <a href="../../study/" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">学習コンテンツ</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="../../study/basics/" role="menuitem">基礎知識</a></li>
+                        <li><a href="../../study/management/" role="menuitem">管理要素</a></li>
+                        <li><a href="../../study/technology/" role="menuitem">技術要素</a></li>
+                        <li><a href="../../study/laws/" role="menuitem">法規・制度</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-dropdown active" role="none">
+                    <a href="../" class="nav-link active" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-current="page">問題演習</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="./" role="menuitem" class="active">分野別問題</a></li>
+                        <li><a href="../mock-exam/" role="menuitem">模擬試験</a></li>
+                        <li><a href="../review/" role="menuitem">復習問題</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../glossary/" class="nav-link" role="menuitem">用語集</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../progress/" class="nav-link" role="menuitem">学習進捗</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../tips/" class="nav-link" role="menuitem">合格体験談</a>
+                </li>
+            </ul>
+            
+            <!-- Theme toggle and other utilities -->
+            <div class="nav-utilities">
+                <button class="theme-toggle" aria-label="ダークモード切り替え" title="ダークモード切り替え">
+                    <span class="theme-icon"></span>
+                </button>
+                <button class="search-toggle" aria-label="検索を開く" title="検索">
+                    <span class="search-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- Page header -->
+        <section class="page-header">
+            <div class="container">
+                <nav aria-label="パンくずリスト" class="breadcrumb">
+                    <ol>
+                        <li><a href="../../">ホーム</a></li>
+                        <li><a href="../">問題演習</a></li>
+                        <li aria-current="page">分野別問題</li>
+                    </ol>
+                </nav>
+                
+                <div class="page-header-content">
+                    <h1 class="page-title">
+                        <span class="page-icon">🎯</span>
+                        分野別問題演習
+                    </h1>
+                    <p class="page-description">
+                        各分野ごとに問題を解いて、着実に実力を向上させましょう。
+                        弱点分野を特定して効率的な学習を進められます。
+                    </p>
+                </div>
+                
+                <div class="page-actions">
+                    <a href="../mock-exam/" class="btn btn-primary">
+                        📝 模擬試験にチャレンジ
+                    </a>
+                    <a href="../../progress/" class="btn btn-outline">
+                        📊 学習進捗を確認
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz container (hidden initially) -->
+        <div id="quiz-container" class="quiz-container" style="display: none;">
+            <!-- Quiz content will be inserted here by JavaScript -->
+        </div>
+
+        <!-- Category selection (shown initially) -->
+        <div id="category-selection" class="category-selection">
+            <!-- Statistics overview -->
+            <section class="practice-stats" aria-labelledby="stats-title">
+                <div class="container">
+                    <h2 id="stats-title">あなたの問題演習状況</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">📊</div>
+                            <div class="stat-value" id="total-attempted">0</div>
+                            <div class="stat-label">解答済み問題数</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">✅</div>
+                            <div class="stat-value" id="total-correct">0</div>
+                            <div class="stat-label">正解数</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🎯</div>
+                            <div class="stat-value" id="average-accuracy">0%</div>
+                            <div class="stat-label">平均正答率</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">⏱️</div>
+                            <div class="stat-value" id="average-time">0秒</div>
+                            <div class="stat-label">平均解答時間</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category cards -->
+            <section class="categories" aria-labelledby="categories-title">
+                <div class="container">
+                    <h2 id="categories-title">分野を選択</h2>
+                    
+                    <div class="categories-grid">
+                        <div class="category-card basics">
+                            <div class="category-header">
+                                <div class="category-icon">🛡️</div>
+                                <h3>基礎知識</h3>
+                                <div class="category-weight">出題比重: 約25%</div>
+                            </div>
+                            
+                            <div class="category-content">
+                                <p>情報セキュリティの基本概念、CIA、脅威と脆弱性、リスクマネジメントなど</p>
+                                
+                                <div class="category-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">正答率</span>
+                                        <span class="stat-value" id="basics-accuracy">-%</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">解答数</span>
+                                        <span class="stat-value" id="basics-count">0問</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="category-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" id="basics-progress" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">習得度: <span id="basics-mastery">0%</span></span>
+                                </div>
+                                
+                                <div class="category-actions">
+                                    <button class="btn btn-primary start-quiz" data-category="basics" data-type="practice">
+                                        問題を解く (20問)
+                                    </button>
+                                    <a href="../../study/basics/" class="btn btn-outline">学習する</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-card management">
+                            <div class="category-header">
+                                <div class="category-icon">👥</div>
+                                <h3>管理要素</h3>
+                                <div class="category-weight">出題比重: 約30%</div>
+                            </div>
+                            
+                            <div class="category-content">
+                                <p>セキュリティポリシー、組織管理、人的セキュリティ、情報資産管理など</p>
+                                
+                                <div class="category-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">正答率</span>
+                                        <span class="stat-value" id="management-accuracy">-%</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">解答数</span>
+                                        <span class="stat-value" id="management-count">0問</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="category-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" id="management-progress" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">習得度: <span id="management-mastery">0%</span></span>
+                                </div>
+                                
+                                <div class="category-actions">
+                                    <button class="btn btn-primary start-quiz" data-category="management" data-type="practice">
+                                        問題を解く (20問)
+                                    </button>
+                                    <a href="../../study/management/" class="btn btn-outline">学習する</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-card technology">
+                            <div class="category-header">
+                                <div class="category-icon">🔧</div>
+                                <h3>技術要素</h3>
+                                <div class="category-weight">出題比重: 約30%</div>
+                            </div>
+                            
+                            <div class="category-content">
+                                <p>暗号化技術、認証システム、ネットワークセキュリティ、システム監査など</p>
+                                
+                                <div class="category-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">正答率</span>
+                                        <span class="stat-value" id="technology-accuracy">-%</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">解答数</span>
+                                        <span class="stat-value" id="technology-count">0問</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="category-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" id="technology-progress" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">習得度: <span id="technology-mastery">0%</span></span>
+                                </div>
+                                
+                                <div class="category-actions">
+                                    <button class="btn btn-primary start-quiz" data-category="technology" data-type="practice">
+                                        問題を解く (20問)
+                                    </button>
+                                    <a href="../../study/technology/" class="btn btn-outline">学習する</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-card laws">
+                            <div class="category-header">
+                                <div class="category-icon">⚖️</div>
+                                <h3>法規・制度</h3>
+                                <div class="category-weight">出題比重: 約15%</div>
+                            </div>
+                            
+                            <div class="category-content">
+                                <p>個人情報保護法、不正アクセス禁止法、サイバーセキュリティ基本法など</p>
+                                
+                                <div class="category-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">正答率</span>
+                                        <span class="stat-value" id="laws-accuracy">-%</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">解答数</span>
+                                        <span class="stat-value" id="laws-count">0問</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="category-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" id="laws-progress" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">習得度: <span id="laws-mastery">0%</span></span>
+                                </div>
+                                
+                                <div class="category-actions">
+                                    <button class="btn btn-primary start-quiz" data-category="laws" data-type="practice">
+                                        問題を解く (20問)
+                                    </button>
+                                    <a href="../../study/laws/" class="btn btn-outline">学習する</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick actions -->
+            <section class="quick-actions" aria-labelledby="actions-title">
+                <div class="container">
+                    <h2 id="actions-title">その他の学習オプション</h2>
+                    
+                    <div class="actions-grid">
+                        <div class="action-card">
+                            <div class="action-icon">🎲</div>
+                            <h3>ランダム問題</h3>
+                            <p>全分野からランダムに20問出題</p>
+                            <button class="btn btn-primary start-quiz" data-category="all" data-type="practice">
+                                ランダム問題を解く
+                            </button>
+                        </div>
+                        
+                        <div class="action-card">
+                            <div class="action-icon">❌</div>
+                            <h3>間違えた問題</h3>
+                            <p>過去に間違えた問題を復習</p>
+                            <a href="../review/" class="btn btn-outline">復習問題へ</a>
+                        </div>
+                        
+                        <div class="action-card">
+                            <div class="action-icon">⭐</div>
+                            <h3>重要問題</h3>
+                            <p>試験でよく出題される重要問題</p>
+                            <button class="btn btn-outline start-quiz" data-category="important" data-type="practice">
+                                重要問題を解く
+                            </button>
+                        </div>
+                        
+                        <div class="action-card">
+                            <div class="action-icon">🏆</div>
+                            <h3>チャレンジ問題</h3>
+                            <p>難易度の高い応用問題</p>
+                            <button class="btn btn-outline start-quiz" data-category="challenge" data-type="practice">
+                                チャレンジ問題を解く
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Study recommendations -->
+            <section class="recommendations" aria-labelledby="recommendations-title">
+                <div class="container">
+                    <h2 id="recommendations-title">おすすめの学習</h2>
+                    <div id="recommendations-content">
+                        <!-- Recommendations will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>学習コンテンツ</h3>
+                    <ul>
+                        <li><a href="../../study/basics/">基礎知識</a></li>
+                        <li><a href="../../study/management/">管理要素</a></li>
+                        <li><a href="../../study/technology/">技術要素</a></li>
+                        <li><a href="../../study/laws/">法規・制度</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>問題演習</h3>
+                    <ul>
+                        <li><a href="./">分野別問題</a></li>
+                        <li><a href="../mock-exam/">模擬試験</a></li>
+                        <li><a href="../review/">復習問題</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="../../exam-info/">試験情報</a></li>
+                        <li><a href="../../glossary/">用語集</a></li>
+                        <li><a href="../../tips/">合格体験談</a></li>
+                        <li><a href="../../progress/">学習進捗</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>このサイトについて</h3>
+                    <p>情報セキュリティマネジメント試験（SG）の合格を支援する学習プラットフォームです。</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 情報セキュリティマネジメント試験学習サイト. All rights reserved.</p>
+                <p class="footer-note">
+                    ※このサイトはIPA（情報処理推進機構）とは関係ありません。学習支援を目的とした非公式サイトです。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/storage.js"></script>
+    <script src="../../assets/js/progress.js"></script>
+    <script src="../../assets/js/quiz.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <!-- Practice page specific script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initPracticePage();
+        });
+
+        function initPracticePage() {
+            // Load statistics
+            updatePracticeStatistics();
+            
+            // Generate recommendations
+            generateRecommendations();
+            
+            // Handle URL parameters for direct category access
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+            if (category && window.QuizEngine) {
+                // Start quiz directly if category is specified
+                window.QuizEngine.startQuiz(category, 'practice');
+                document.getElementById('category-selection').style.display = 'none';
+            }
+        }
+
+        function updatePracticeStatistics() {
+            if (!window.StorageManager) return;
+            
+            const studyData = window.StorageManager.getStudyData();
+            const questionStats = studyData.questionStats || {};
+            
+            // Calculate overall stats
+            let totalAttempted = 0;
+            let totalCorrect = 0;
+            let totalTime = 0;
+            
+            Object.values(questionStats).forEach(stats => {
+                totalAttempted += stats.total || 0;
+                totalCorrect += stats.correct || 0;
+                totalTime += stats.totalTime || 0;
+            });
+            
+            const averageAccuracy = totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 100) : 0;
+            const averageTime = totalAttempted > 0 ? Math.round(totalTime / totalAttempted / 1000) : 0;
+            
+            // Update overall stats
+            updateElement('total-attempted', totalAttempted);
+            updateElement('total-correct', totalCorrect);
+            updateElement('average-accuracy', `${averageAccuracy}%`);
+            updateElement('average-time', `${averageTime}秒`);
+            
+            // Update category-specific stats
+            const categories = ['basics', 'management', 'technology', 'laws'];
+            categories.forEach(category => {
+                const stats = questionStats[category] || { total: 0, correct: 0 };
+                const accuracy = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0;
+                const mastery = studyData.progress?.[category] || 0;
+                
+                updateElement(`${category}-accuracy`, `${accuracy}%`);
+                updateElement(`${category}-count`, `${stats.total}問`);
+                updateElement(`${category}-mastery`, `${mastery}%`);
+                
+                const progressBar = document.getElementById(`${category}-progress`);
+                if (progressBar) {
+                    progressBar.style.width = `${mastery}%`;
+                    progressBar.style.backgroundColor = getProgressColor(mastery);
+                }
+            });
+        }
+
+        function generateRecommendations() {
+            if (!window.StorageManager) return;
+            
+            const studyData = window.StorageManager.getStudyData();
+            const questionStats = studyData.questionStats || {};
+            const progress = studyData.progress || {};
+            
+            const recommendations = [];
+            
+            // Find weak areas
+            const categories = {
+                'basics': '基礎知識',
+                'management': '管理要素',
+                'technology': '技術要素',
+                'laws': '法規・制度'
+            };
+            
+            Object.entries(categories).forEach(([key, name]) => {
+                const stats = questionStats[key] || { total: 0, correct: 0 };
+                const accuracy = stats.total > 0 ? (stats.correct / stats.total) * 100 : 0;
+                const mastery = progress[key] || 0;
+                
+                if (stats.total < 10) {
+                    recommendations.push({
+                        type: 'practice',
+                        title: `${name}の問題演習が不足`,
+                        description: 'まずは基本問題から始めましょう',
+                        action: `${name}を学習`,
+                        link: `../../study/${key}/`,
+                        priority: 'high'
+                    });
+                } else if (accuracy < 70) {
+                    recommendations.push({
+                        type: 'study',
+                        title: `${name}の理解が不十分`,
+                        description: `正答率が${Math.round(accuracy)}%です。学習内容を確認しましょう`,
+                        action: `${name}を復習`,
+                        link: `../../study/${key}/`,
+                        priority: 'high'
+                    });
+                } else if (mastery < 80) {
+                    recommendations.push({
+                        type: 'practice',
+                        title: `${name}をさらに強化`,
+                        description: 'より多くの問題を解いて定着を図りましょう',
+                        action: `${name}の問題を解く`,
+                        link: `?category=${key}`,
+                        priority: 'medium'
+                    });
+                }
+            });
+            
+            // If no specific recommendations, provide general advice
+            if (recommendations.length === 0) {
+                recommendations.push({
+                    type: 'excellent',
+                    title: '素晴らしい進捗です！',
+                    description: '全分野でバランスよく学習できています',
+                    action: '模擬試験に挑戦',
+                    link: '../mock-exam/',
+                    priority: 'medium'
+                });
+            }
+            
+            displayRecommendations(recommendations);
+        }
+
+        function displayRecommendations(recommendations) {
+            const container = document.getElementById('recommendations-content');
+            if (!container) return;
+            
+            const html = recommendations.slice(0, 3).map(rec => `
+                <div class="recommendation-item ${rec.type} ${rec.priority}">
+                    <div class="recommendation-content">
+                        <h3>${rec.title}</h3>
+                        <p>${rec.description}</p>
+                    </div>
+                    <a href="${rec.link}" class="btn btn-outline">${rec.action}</a>
+                </div>
+            `).join('');
+            
+            container.innerHTML = html;
+        }
+
+        function updateElement(id, value) {
+            const element = document.getElementById(id);
+            if (element) element.textContent = value;
+        }
+
+        function getProgressColor(percentage) {
+            if (percentage < 30) return '#f44336'; // Red
+            if (percentage < 60) return '#ff9800'; // Orange
+            if (percentage < 80) return '#2196f3'; // Blue
+            return '#4caf50'; // Green
+        }
+    </script>
+</body>
+</html>

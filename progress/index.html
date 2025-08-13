@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="情報セキュリティマネジメント試験（SG）の学習進捗を詳細に確認。分野別習得度、学習時間、問題演習状況を可視化。">
+    <meta name="keywords" content="学習進捗,習得度,学習時間,統計,分析,SG試験">
+    <title>学習進捗 | 情報セキュリティマネジメント試験 学習サイト</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/themes.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#1976d2">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
+    <!-- Header with navigation -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="メインナビゲーション">
+            <div class="nav-brand">
+                <a href="../" class="brand-link" aria-label="ホームページへ戻る">
+                    <img src="../assets/images/logo.svg" alt="SG試験学習サイト" class="brand-logo">
+                    <span class="brand-text">SG試験学習サイト</span>
+                </a>
+            </div>
+            
+            <!-- Mobile menu toggle -->
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="ナビゲーションメニューを開く">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <!-- Navigation menu -->
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="../" class="nav-link" role="menuitem">ホーム</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../exam-info/" class="nav-link" role="menuitem">試験情報</a>
+                </li>
+                <li class="nav-item nav-dropdown" role="none">
+                    <a href="../study/" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">学習コンテンツ</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="../study/basics/" role="menuitem">基礎知識</a></li>
+                        <li><a href="../study/management/" role="menuitem">管理要素</a></li>
+                        <li><a href="../study/technology/" role="menuitem">技術要素</a></li>
+                        <li><a href="../study/laws/" role="menuitem">法規・制度</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-dropdown" role="none">
+                    <a href="../practice/" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">問題演習</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="../practice/category/" role="menuitem">分野別問題</a></li>
+                        <li><a href="../practice/mock-exam/" role="menuitem">模擬試験</a></li>
+                        <li><a href="../practice/review/" role="menuitem">復習問題</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../glossary/" class="nav-link" role="menuitem">用語集</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="./" class="nav-link active" role="menuitem" aria-current="page">学習進捗</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../tips/" class="nav-link" role="menuitem">合格体験談</a>
+                </li>
+            </ul>
+            
+            <!-- Theme toggle and other utilities -->
+            <div class="nav-utilities">
+                <button class="theme-toggle" aria-label="ダークモード切り替え" title="ダークモード切り替え">
+                    <span class="theme-icon"></span>
+                </button>
+                <button class="search-toggle" aria-label="検索を開く" title="検索">
+                    <span class="search-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- Page header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <h1 class="page-title">
+                        <span class="page-icon">📊</span>
+                        学習進捗
+                    </h1>
+                    <p class="page-description">
+                        あなたの学習状況を詳細に確認できます。
+                        弱点分野を特定して効率的な学習計画を立てましょう。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress content will be populated by JavaScript -->
+        <div id="progress-content">
+            <div class="container">
+                <div class="loading-message">
+                    <p>学習データを読み込んでいます...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>学習コンテンツ</h3>
+                    <ul>
+                        <li><a href="../study/basics/">基礎知識</a></li>
+                        <li><a href="../study/management/">管理要素</a></li>
+                        <li><a href="../study/technology/">技術要素</a></li>
+                        <li><a href="../study/laws/">法規・制度</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>問題演習</h3>
+                    <ul>
+                        <li><a href="../practice/category/">分野別問題</a></li>
+                        <li><a href="../practice/mock-exam/">模擬試験</a></li>
+                        <li><a href="../practice/review/">復習問題</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="../exam-info/">試験情報</a></li>
+                        <li><a href="../glossary/">用語集</a></li>
+                        <li><a href="../tips/">合格体験談</a></li>
+                        <li><a href="./">学習進捗</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>このサイトについて</h3>
+                    <p>情報セキュリティマネジメント試験（SG）の合格を支援する学習プラットフォームです。</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 情報セキュリティマネジメント試験学習サイト. All rights reserved.</p>
+                <p class="footer-note">
+                    ※このサイトはIPA（情報処理推進機構）とは関係ありません。学習支援を目的とした非公式サイトです。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/storage.js"></script>
+    <script src="../assets/js/progress.js"></script>
+    <script src="../assets/js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.ProgressTracker) {
+                // Update all progress displays
+                window.ProgressTracker.updateAllDisplays();
+                
+                // Load detailed progress page content
+                loadProgressPage();
+            }
+        });
+        
+        function loadProgressPage() {
+            const container = document.getElementById('progress-content');
+            container.innerHTML = `
+                <div class="container">
+                    <section class="study-stats">
+                        <h2>学習統計</h2>
+                        <div class="stats-container" id="study-statistics">
+                            <!-- Statistics will be populated by ProgressTracker -->
+                        </div>
+                        <div class="stats-chart">
+                            <h3>分野別習得度</h3>
+                            <div class="progress-bars" id="category-progress">
+                                <!-- Progress bars will be populated -->
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="coming-soon">
+                        <h2>🚧 詳細な進捗分析機能を準備中</h2>
+                        <p>より詳細な学習分析機能を開発中です。現在の進捗はホームページでご確認いただけます。</p>
+                        <a href="../" class="btn btn-primary">ホームページで確認</a>
+                    </section>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

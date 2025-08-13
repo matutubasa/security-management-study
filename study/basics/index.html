@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="情報セキュリティマネジメント試験（SG）の基礎知識学習コンテンツ。CIA、脅威と脆弱性、リスクマネジメントなど基本概念を詳しく解説。">
+    <meta name="keywords" content="情報セキュリティ,基礎知識,CIA,脅威,脆弱性,リスクマネジメント,SG試験">
+    <title>基礎知識 | 情報セキュリティマネジメント試験 学習サイト</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/themes.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#1976d2">
+    
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon-16x16.png">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
+    <!-- Header with navigation -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="メインナビゲーション">
+            <div class="nav-brand">
+                <a href="../../" class="brand-link" aria-label="ホームページへ戻る">
+                    <img src="../../assets/images/logo.svg" alt="SG試験学習サイト" class="brand-logo">
+                    <span class="brand-text">SG試験学習サイト</span>
+                </a>
+            </div>
+            
+            <!-- Mobile menu toggle -->
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="ナビゲーションメニューを開く">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <!-- Navigation menu -->
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="../../" class="nav-link" role="menuitem">ホーム</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../exam-info/" class="nav-link" role="menuitem">試験情報</a>
+                </li>
+                <li class="nav-item nav-dropdown active" role="none">
+                    <a href="../" class="nav-link active" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-current="page">学習コンテンツ</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="./" role="menuitem" class="active">基礎知識</a></li>
+                        <li><a href="../management/" role="menuitem">管理要素</a></li>
+                        <li><a href="../technology/" role="menuitem">技術要素</a></li>
+                        <li><a href="../laws/" role="menuitem">法規・制度</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-dropdown" role="none">
+                    <a href="../../practice/" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">問題演習</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="../../practice/category/" role="menuitem">分野別問題</a></li>
+                        <li><a href="../../practice/mock-exam/" role="menuitem">模擬試験</a></li>
+                        <li><a href="../../practice/review/" role="menuitem">復習問題</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../glossary/" class="nav-link" role="menuitem">用語集</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../progress/" class="nav-link" role="menuitem">学習進捗</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../tips/" class="nav-link" role="menuitem">合格体験談</a>
+                </li>
+            </ul>
+            
+            <!-- Theme toggle and other utilities -->
+            <div class="nav-utilities">
+                <button class="theme-toggle" aria-label="ダークモード切り替え" title="ダークモード切り替え">
+                    <span class="theme-icon"></span>
+                </button>
+                <button class="search-toggle" aria-label="検索を開く" title="検索">
+                    <span class="search-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- Page header -->
+        <section class="page-header">
+            <div class="container">
+                <nav aria-label="パンくずリスト" class="breadcrumb">
+                    <ol>
+                        <li><a href="../../">ホーム</a></li>
+                        <li><a href="../">学習コンテンツ</a></li>
+                        <li aria-current="page">基礎知識</li>
+                    </ol>
+                </nav>
+                
+                <div class="page-header-content">
+                    <h1 class="page-title">
+                        <span class="page-icon">🛡️</span>
+                        基礎知識
+                    </h1>
+                    <p class="page-description">
+                        情報セキュリティの基本概念から脅威・脆弱性、リスクマネジメントまで、
+                        試験合格に必要な基礎知識を体系的に学習します。
+                    </p>
+                </div>
+                
+                <div class="page-actions">
+                    <a href="../../practice/category/?category=basics" class="btn btn-primary">
+                        🎯 基礎問題を解く
+                    </a>
+                    <button id="bookmark-page" class="btn btn-outline" title="ページをブックマーク">
+                        🔖 ブックマーク
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress indicator -->
+        <section class="study-progress" aria-labelledby="progress-title">
+            <div class="container">
+                <h2 id="progress-title" class="visually-hidden">学習進捗</h2>
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span class="progress-label">基礎知識の習得度</span>
+                        <span class="progress-value" id="basics-progress">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="basics-progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of contents -->
+        <section class="table-of-contents" aria-labelledby="toc-title">
+            <div class="container">
+                <h2 id="toc-title">学習内容</h2>
+                <div class="toc-grid">
+                    <div class="toc-item">
+                        <h3><a href="#cia-model">1. 情報セキュリティの三要素（CIA）</a></h3>
+                        <p>機密性、完全性、可用性の基本概念</p>
+                        <div class="toc-meta">
+                            <span class="difficulty easy">基礎</span>
+                            <span class="study-time">15分</span>
+                        </div>
+                    </div>
+                    
+                    <div class="toc-item">
+                        <h3><a href="#threats-vulnerabilities">2. 脅威と脆弱性</a></h3>
+                        <p>情報システムに対する脅威と脆弱性の種類</p>
+                        <div class="toc-meta">
+                            <span class="difficulty normal">標準</span>
+                            <span class="study-time">20分</span>
+                        </div>
+                    </div>
+                    
+                    <div class="toc-item">
+                        <h3><a href="#risk-management">3. リスクマネジメント</a></h3>
+                        <p>リスク分析と対策の基本的な考え方</p>
+                        <div class="toc-meta">
+                            <span class="difficulty normal">標準</span>
+                            <span class="study-time">25分</span>
+                        </div>
+                    </div>
+                    
+                    <div class="toc-item">
+                        <h3><a href="#incident-response">4. インシデント対応</a></h3>
+                        <p>セキュリティインシデントの発生時の対応</p>
+                        <div class="toc-meta">
+                            <span class="difficulty normal">標準</span>
+                            <span class="study-time">20分</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Study content -->
+        <div class="study-content">
+            <!-- Section 1: CIA Model -->
+            <section id="cia-model" class="content-section" aria-labelledby="cia-title">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 id="cia-title" class="section-title">
+                            <span class="section-number">1</span>
+                            情報セキュリティの三要素（CIA）
+                        </h2>
+                        <div class="section-meta">
+                            <span class="difficulty easy">基礎</span>
+                            <span class="study-time">⏱️ 15分</span>
+                            <span class="importance high">★★★</span>
+                        </div>
+                    </div>
+
+                    <div class="content-body">
+                        <div class="concept-intro">
+                            <h3>概要</h3>
+                            <p>情報セキュリティの三要素（CIAトライアド）は、情報セキュリティの基本中の基本です。すべてのセキュリティ対策は、この3つの要素を守ることを目的としています。</p>
+                        </div>
+
+                        <div class="cia-grid">
+                            <div class="cia-element confidentiality">
+                                <div class="element-header">
+                                    <div class="element-icon">🔒</div>
+                                    <h4>機密性（Confidentiality）</h4>
+                                </div>
+                                <div class="element-content">
+                                    <p><strong>定義：</strong>許可された者のみが情報にアクセスできること</p>
+                                    
+                                    <h5>具体例</h5>
+                                    <ul>
+                                        <li>パスワードによるアクセス制御</li>
+                                        <li>暗号化による情報保護</li>
+                                        <li>アクセス権限の設定</li>
+                                        <li>情報漏洩の防止</li>
+                                    </ul>
+                                    
+                                    <h5>脅威</h5>
+                                    <ul>
+                                        <li>不正アクセス</li>
+                                        <li>情報漏洩</li>
+                                        <li>盗聴・傍受</li>
+                                        <li>ソーシャルエンジニアリング</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="cia-element integrity">
+                                <div class="element-header">
+                                    <div class="element-icon">✅</div>
+                                    <h4>完全性（Integrity）</h4>
+                                </div>
+                                <div class="element-content">
+                                    <p><strong>定義：</strong>情報が正確で完全な状態を保つこと</p>
+                                    
+                                    <h5>具体例</h5>
+                                    <ul>
+                                        <li>ハッシュ値による改ざん検知</li>
+                                        <li>デジタル署名</li>
+                                        <li>アクセスログの記録</li>
+                                        <li>バックアップとリストア</li>
+                                    </ul>
+                                    
+                                    <h5>脅威</h5>
+                                    <ul>
+                                        <li>データの改ざん</li>
+                                        <li>不正な削除・変更</li>
+                                        <li>マルウェアによる破損</li>
+                                        <li>入力ミスや操作ミス</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="cia-element availability">
+                                <div class="element-header">
+                                    <div class="element-icon">⚡</div>
+                                    <h4>可用性（Availability）</h4>
+                                </div>
+                                <div class="element-content">
+                                    <p><strong>定義：</strong>必要な時に情報やシステムが利用可能であること</p>
+                                    
+                                    <h5>具体例</h5>
+                                    <ul>
+                                        <li>冗長化によるシステム可用性向上</li>
+                                        <li>定期的なバックアップ</li>
+                                        <li>災害対策・復旧計画</li>
+                                        <li>負荷分散とスケーリング</li>
+                                    </ul>
+                                    
+                                    <h5>脅威</h5>
+                                    <ul>
+                                        <li>DoS/DDoS攻撃</li>
+                                        <li>システム障害</li>
+                                        <li>自然災害</li>
+                                        <li>人為的なミス</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="key-points">
+                            <h3>🔑 重要ポイント</h3>
+                            <div class="points-grid">
+                                <div class="point-item">
+                                    <h4>相互関係</h4>
+                                    <p>3つの要素は互いに関連し合い、一つが損なわれると他にも影響する</p>
+                                </div>
+                                <div class="point-item">
+                                    <h4>バランス</h4>
+                                    <p>状況に応じて3要素の重要度が変わるため、適切なバランスが重要</p>
+                                </div>
+                                <div class="point-item">
+                                    <h4>評価基準</h4>
+                                    <p>すべてのセキュリティ対策はCIAの観点から評価される</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="exam-tips">
+                            <h3>📝 試験対策</h3>
+                            <div class="tips-content">
+                                <p><strong>よく出題される問題：</strong></p>
+                                <ul>
+                                    <li>各要素の定義と具体例</li>
+                                    <li>脅威と対応するCIA要素の組み合わせ</li>
+                                    <li>具体的なセキュリティ対策がどのCIA要素を守るか</li>
+                                </ul>
+                                
+                                <p><strong>覚え方：</strong></p>
+                                <p>「<strong>C</strong>onf（機密性）・<strong>I</strong>nt（完全性）・<strong>A</strong>va（可用性）」として暗記</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Threats and Vulnerabilities -->
+            <section id="threats-vulnerabilities" class="content-section" aria-labelledby="threats-title">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 id="threats-title" class="section-title">
+                            <span class="section-number">2</span>
+                            脅威と脆弱性
+                        </h2>
+                        <div class="section-meta">
+                            <span class="difficulty normal">標準</span>
+                            <span class="study-time">⏱️ 20分</span>
+                            <span class="importance high">★★★</span>
+                        </div>
+                    </div>
+
+                    <div class="content-body">
+                        <div class="concept-intro">
+                            <h3>概要</h3>
+                            <p>脅威（Threat）と脆弱性（Vulnerability）の理解は、適切なセキュリティ対策を選択するために不可欠です。</p>
+                        </div>
+
+                        <div class="definitions">
+                            <div class="definition-item threat">
+                                <h4>🎯 脅威（Threat）</h4>
+                                <p>情報資産に損害を与える可能性のある要因</p>
+                                <div class="examples">
+                                    <h5>主な脅威</h5>
+                                    <div class="threat-categories">
+                                        <div class="category">
+                                            <h6>意図的脅威</h6>
+                                            <ul>
+                                                <li>不正アクセス</li>
+                                                <li>マルウェア</li>
+                                                <li>DoS攻撃</li>
+                                                <li>内部犯行</li>
+                                            </ul>
+                                        </div>
+                                        <div class="category">
+                                            <h6>非意図的脅威</h6>
+                                            <ul>
+                                                <li>操作ミス</li>
+                                                <li>設定ミス</li>
+                                                <li>機器の故障</li>
+                                                <li>自然災害</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="definition-item vulnerability">
+                                <h4>🔍 脆弱性（Vulnerability）</h4>
+                                <p>情報システムの弱点や欠陥</p>
+                                <div class="examples">
+                                    <h5>主な脆弱性</h5>
+                                    <div class="vulnerability-categories">
+                                        <div class="category">
+                                            <h6>技術的脆弱性</h6>
+                                            <ul>
+                                                <li>ソフトウェアのバグ</li>
+                                                <li>設定の不備</li>
+                                                <li>暗号化の不備</li>
+                                                <li>認証の不備</li>
+                                            </ul>
+                                        </div>
+                                        <div class="category">
+                                            <h6>物理的脆弱性</h6>
+                                            <ul>
+                                                <li>入退室管理の不備</li>
+                                                <li>機器の盗難リスク</li>
+                                                <li>環境対策の不備</li>
+                                                <li>破棄方法の不備</li>
+                                            </ul>
+                                        </div>
+                                        <div class="category">
+                                            <h6>人的脆弱性</h6>
+                                            <ul>
+                                                <li>セキュリティ教育不足</li>
+                                                <li>パスワード管理の不備</li>
+                                                <li>社会工学攻撃への感受性</li>
+                                                <li>規則・手順の不遵守</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="threat-landscape">
+                            <h3>🌐 現在の脅威状況</h3>
+                            <div class="landscape-grid">
+                                <div class="landscape-item">
+                                    <h4>ランサムウェア</h4>
+                                    <p>データを暗号化し、復号のために身代金を要求する攻撃</p>
+                                </div>
+                                <div class="landscape-item">
+                                    <h4>標的型攻撃</h4>
+                                    <p>特定の組織や個人を狙った巧妙な攻撃</p>
+                                </div>
+                                <div class="landscape-item">
+                                    <h4>サプライチェーン攻撃</h4>
+                                    <p>信頼された第三者を経由した間接的な攻撃</p>
+                                </div>
+                                <div class="landscape-item">
+                                    <h4>IoT機器の脆弱性</h4>
+                                    <p>セキュリティが不十分なIoT機器を狙った攻撃</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="exam-tips">
+                            <h3>📝 試験対策</h3>
+                            <div class="tips-content">
+                                <p><strong>出題パターン：</strong></p>
+                                <ul>
+                                    <li>脅威と脆弱性の定義と違い</li>
+                                    <li>具体的な攻撃手法と対応する脆弱性</li>
+                                    <li>脅威の分類（意図的/非意図的）</li>
+                                    <li>最新の脅威動向</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Study tools and actions -->
+            <section class="study-tools" aria-labelledby="tools-title">
+                <div class="container">
+                    <h2 id="tools-title">学習サポート</h2>
+                    <div class="tools-grid">
+                        <div class="tool-item">
+                            <div class="tool-icon">📝</div>
+                            <h3>学習ノート</h3>
+                            <p>重要なポイントをメモして復習に活用</p>
+                            <button class="btn btn-outline" id="open-notes">ノートを開く</button>
+                        </div>
+                        
+                        <div class="tool-item">
+                            <div class="tool-icon">🎯</div>
+                            <h3>練習問題</h3>
+                            <p>基礎知識の理解度を確認</p>
+                            <a href="../../practice/category/?category=basics" class="btn btn-primary">問題を解く</a>
+                        </div>
+                        
+                        <div class="tool-item">
+                            <div class="tool-icon">🔍</div>
+                            <h3>用語検索</h3>
+                            <p>わからない用語をすぐに調べる</p>
+                            <a href="../../glossary/" class="btn btn-outline">用語集へ</a>
+                        </div>
+                        
+                        <div class="tool-item">
+                            <div class="tool-icon">📊</div>
+                            <h3>学習進捗</h3>
+                            <p>基礎知識の習得状況を確認</p>
+                            <a href="../../progress/" class="btn btn-outline">進捗を見る</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Navigation to next section -->
+        <section class="content-navigation">
+            <div class="container">
+                <div class="nav-buttons">
+                    <a href="../" class="btn btn-outline nav-btn prev">
+                        ← 学習コンテンツ一覧
+                    </a>
+                    <a href="../management/" class="btn btn-primary nav-btn next">
+                        管理要素 →
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Notes modal -->
+    <div class="modal" id="notes-modal" aria-hidden="true" role="dialog" aria-labelledby="notes-title">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="notes-title">学習ノート - 基礎知識</h3>
+                <button class="modal-close" aria-label="ノートを閉じる">×</button>
+            </div>
+            <div class="modal-body">
+                <textarea id="study-notes" placeholder="ここに重要なポイントや疑問点をメモしてください...
+                
+例：
+- CIAは機密性、完全性、可用性の3要素
+- 脅威は損害を与える要因、脆弱性は弱点
+- ランサムウェアが現在の主要な脅威"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" id="clear-notes">クリア</button>
+                <button class="btn btn-primary" id="save-notes">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>学習コンテンツ</h3>
+                    <ul>
+                        <li><a href="./">基礎知識</a></li>
+                        <li><a href="../management/">管理要素</a></li>
+                        <li><a href="../technology/">技術要素</a></li>
+                        <li><a href="../laws/">法規・制度</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>問題演習</h3>
+                    <ul>
+                        <li><a href="../../practice/category/">分野別問題</a></li>
+                        <li><a href="../../practice/mock-exam/">模擬試験</a></li>
+                        <li><a href="../../practice/review/">復習問題</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="../../exam-info/">試験情報</a></li>
+                        <li><a href="../../glossary/">用語集</a></li>
+                        <li><a href="../../tips/">合格体験談</a></li>
+                        <li><a href="../../progress/">学習進捗</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>このサイトについて</h3>
+                    <p>情報セキュリティマネジメント試験（SG）の合格を支援する学習プラットフォームです。</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 情報セキュリティマネジメント試験学習サイト. All rights reserved.</p>
+                <p class="footer-note">
+                    ※このサイトはIPA（情報処理推進機構）とは関係ありません。学習支援を目的とした非公式サイトです。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/storage.js"></script>
+    <script src="../../assets/js/progress.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <!-- Study page specific script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize study page
+            initStudyPage();
+            
+            // Load notes
+            loadStudyNotes();
+            
+            // Track study time
+            const startTime = Date.now();
+            
+            // Record study session when leaving
+            window.addEventListener('beforeunload', function() {
+                const studyTime = Date.now() - startTime;
+                if (window.ProgressTracker && studyTime > 10000) {
+                    window.ProgressTracker.recordStudySession(studyTime, 'basics', ['cia', 'threats', 'vulnerabilities']);
+                }
+            });
+        });
+
+        function initStudyPage() {
+            // Bookmark functionality
+            const bookmarkBtn = document.getElementById('bookmark-page');
+            if (bookmarkBtn && window.StorageManager) {
+                const isBookmarked = window.StorageManager.getBookmarks().some(b => b.pageId === 'study-basics');
+                updateBookmarkButton(bookmarkBtn, isBookmarked);
+                
+                bookmarkBtn.addEventListener('click', function() {
+                    const isCurrentlyBookmarked = this.classList.contains('bookmarked');
+                    window.StorageManager.toggleBookmark(
+                        'study-basics',
+                        '基礎知識 - 情報セキュリティマネジメント試験',
+                        window.location.pathname
+                    );
+                    updateBookmarkButton(this, !isCurrentlyBookmarked);
+                });
+            }
+
+            // Notes modal
+            initNotesModal();
+            
+            // Progress tracking
+            updateProgressDisplay();
+            
+            // Section completion tracking
+            trackSectionProgress();
+        }
+
+        function updateBookmarkButton(button, isBookmarked) {
+            if (isBookmarked) {
+                button.classList.add('bookmarked');
+                button.innerHTML = '🔖 ブックマーク済み';
+                button.title = 'ブックマークを削除';
+            } else {
+                button.classList.remove('bookmarked');
+                button.innerHTML = '🔖 ブックマーク';
+                button.title = 'ページをブックマーク';
+            }
+        }
+
+        function initNotesModal() {
+            const modal = document.getElementById('notes-modal');
+            const openBtn = document.getElementById('open-notes');
+            const closeBtn = modal.querySelector('.modal-close');
+            const overlay = modal.querySelector('.modal-overlay');
+            const saveBtn = document.getElementById('save-notes');
+            const clearBtn = document.getElementById('clear-notes');
+            const textarea = document.getElementById('study-notes');
+
+            openBtn.addEventListener('click', () => openModal(modal));
+            closeBtn.addEventListener('click', () => closeModal(modal));
+            overlay.addEventListener('click', () => closeModal(modal));
+            
+            saveBtn.addEventListener('click', () => {
+                saveStudyNotes(textarea.value);
+                closeModal(modal);
+                showNotification('ノートを保存しました', 'success');
+            });
+            
+            clearBtn.addEventListener('click', () => {
+                if (confirm('ノートの内容をクリアしますか？')) {
+                    textarea.value = '';
+                }
+            });
+        }
+
+        function openModal(modal) {
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            
+            // Focus on textarea
+            const textarea = modal.querySelector('textarea');
+            if (textarea) textarea.focus();
+        }
+
+        function closeModal(modal) {
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        function loadStudyNotes() {
+            if (window.StorageManager) {
+                const notes = window.StorageManager.getNote('study-basics');
+                if (notes) {
+                    document.getElementById('study-notes').value = notes.text;
+                }
+            }
+        }
+
+        function saveStudyNotes(noteText) {
+            if (window.StorageManager) {
+                window.StorageManager.saveNote('study-basics', noteText);
+            }
+        }
+
+        function updateProgressDisplay() {
+            if (window.StorageManager) {
+                const studyData = window.StorageManager.getStudyData();
+                const progress = studyData.progress?.basics || 0;
+                
+                const progressValue = document.getElementById('basics-progress');
+                const progressBar = document.getElementById('basics-progress-bar');
+                
+                if (progressValue) progressValue.textContent = `${progress}%`;
+                if (progressBar) progressBar.style.width = `${progress}%`;
+            }
+        }
+
+        function trackSectionProgress() {
+            // Track which sections have been viewed
+            const sections = document.querySelectorAll('.content-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                        const sectionId = entry.target.id;
+                        markSectionViewed(sectionId);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            sections.forEach(section => observer.observe(section));
+        }
+
+        function markSectionViewed(sectionId) {
+            if (window.StorageManager) {
+                const studyData = window.StorageManager.getStudyData();
+                if (!studyData.viewedSections) studyData.viewedSections = {};
+                if (!studyData.viewedSections.basics) studyData.viewedSections.basics = [];
+                
+                if (!studyData.viewedSections.basics.includes(sectionId)) {
+                    studyData.viewedSections.basics.push(sectionId);
+                    window.StorageManager.updateStudyData({ viewedSections: studyData.viewedSections });
+                    
+                    // Update progress
+                    const totalSections = 4; // cia-model, threats-vulnerabilities, risk-management, incident-response
+                    const viewedSections = studyData.viewedSections.basics.length;
+                    const newProgress = Math.min(100, Math.round((viewedSections / totalSections) * 100));
+                    
+                    if (newProgress > (studyData.progress?.basics || 0)) {
+                        studyData.progress = studyData.progress || {};
+                        studyData.progress.basics = newProgress;
+                        window.StorageManager.updateStudyData({ progress: studyData.progress });
+                        updateProgressDisplay();
+                    }
+                }
+            }
+        }
+
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
