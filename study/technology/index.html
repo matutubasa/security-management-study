@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="情報セキュリティマネジメント試験（SG）の技術要素学習コンテンツ。暗号化、認証技術、ネットワークセキュリティなどを詳しく解説。">
+    <meta name="keywords" content="情報セキュリティ,技術要素,暗号化,認証,ネットワークセキュリティ,SG試験">
+    <title>技術要素 | 情報セキュリティマネジメント試験 学習サイト</title>
+    
+    <!-- Google Fonts for Japanese support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/themes.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#1976d2">
+    
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon-16x16.png">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
+    <!-- Header with navigation -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="メインナビゲーション">
+            <div class="nav-brand">
+                <a href="../../" class="brand-link" aria-label="ホームページへ戻る">
+                    <img src="../../assets/images/logo.svg" alt="SG試験学習サイト" class="brand-logo">
+                    <span class="brand-text">SG試験学習サイト</span>
+                </a>
+            </div>
+            
+            <!-- Mobile menu toggle -->
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="ナビゲーションメニューを開く">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <!-- Navigation menu -->
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="../../" class="nav-link" role="menuitem">ホーム</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../exam-info/" class="nav-link" role="menuitem">試験情報</a>
+                </li>
+                <li class="nav-item nav-dropdown active" role="none">
+                    <a href="../" class="nav-link active" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-current="page">学習コンテンツ</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="../basics/" role="menuitem">基礎知識</a></li>
+                        <li><a href="../management/" role="menuitem">管理要素</a></li>
+                        <li><a href="./" role="menuitem" class="active">技術要素</a></li>
+                        <li><a href="../laws/" role="menuitem">法規・制度</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-dropdown" role="none">
+                    <a href="../../practice/" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">問題演習</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="../../practice/category/" role="menuitem">分野別問題</a></li>
+                        <li><a href="../../practice/mock-exam/" role="menuitem">模擬試験</a></li>
+                        <li><a href="../../practice/review/" role="menuitem">復習問題</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../glossary/" class="nav-link" role="menuitem">用語集</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../progress/" class="nav-link" role="menuitem">学習進捗</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../tips/" class="nav-link" role="menuitem">合格体験談</a>
+                </li>
+            </ul>
+            
+            <!-- Theme toggle and other utilities -->
+            <div class="nav-utilities">
+                <button class="theme-toggle" aria-label="ダークモード切り替え" title="ダークモード切り替え">
+                    <span class="theme-icon"></span>
+                </button>
+                <button class="search-toggle" aria-label="検索を開く" title="検索">
+                    <span class="search-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- Page header -->
+        <section class="page-header">
+            <div class="container">
+                <nav aria-label="パンくずリスト" class="breadcrumb">
+                    <ol>
+                        <li><a href="../../">ホーム</a></li>
+                        <li><a href="../">学習コンテンツ</a></li>
+                        <li aria-current="page">技術要素</li>
+                    </ol>
+                </nav>
+                
+                <div class="page-header-content">
+                    <h1 class="page-title">
+                        <span class="page-icon">🔐</span>
+                        技術要素
+                    </h1>
+                    <p class="page-description">
+                        情報セキュリティを支える技術的な対策や仕組みについて、
+                        暗号化から認証技術まで体系的に学習します。
+                    </p>
+                </div>
+                
+                <div class="page-actions">
+                    <a href="../../practice/category/?category=technology" class="btn btn-primary">
+                        🎯 技術問題を解く
+                    </a>
+                    <button id="bookmark-page" class="btn btn-outline" title="ページをブックマーク">
+                        🔖 ブックマーク
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress indicator -->
+        <section class="study-progress" aria-labelledby="progress-title">
+            <div class="container">
+                <h2 id="progress-title" class="visually-hidden">学習進捗</h2>
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span class="progress-label">技術要素の習得度</span>
+                        <span class="progress-value" id="technology-progress">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="technology-progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of contents -->
+        <section class="table-of-contents" aria-labelledby="toc-title">
+            <div class="container">
+                <h2 id="toc-title">学習内容</h2>
+                <div class="toc-grid">
+                    <div class="toc-item">
+                        <h3><a href="#cryptography">1. 暗号化技術</a></h3>
+                        <p>共通鍵暗号、公開鍵暗号、ハッシュ関数</p>
+                        <div class="toc-meta">
+                            <span class="difficulty hard">応用</span>
+                            <span class="study-time">40分</span>
+                        </div>
+                    </div>
+                    
+                    <div class="toc-item">
+                        <h3><a href="#authentication">2. 認証技術</a></h3>
+                        <p>本人認証、デジタル署名、PKI</p>
+                        <div class="toc-meta">
+                            <span class="difficulty normal">標準</span>
+                            <span class="study-time">35分</span>
+                        </div>
+                    </div>
+                    
+                    <div class="toc-item">
+                        <h3><a href="#network-security">3. ネットワークセキュリティ</a></h3>
+                        <p>ファイアウォール、VPN、IDS/IPS</p>
+                        <div class="toc-meta">
+                            <span class="difficulty normal">標準</span>
+                            <span class="study-time">30分</span>
+                        </div>
+                    </div>
+                    
+                    <div class="toc-item">
+                        <h3><a href="#access-control">4. アクセス制御</a></h3>
+                        <p>アクセス制御モデルと実装技術</p>
+                        <div class="toc-meta">
+                            <span class="difficulty normal">標準</span>
+                            <span class="study-time">25分</span>
+                        </div>
+                    </div>
+                    
+                    <div class="toc-item">
+                        <h3><a href="#malware-protection">5. マルウェア対策</a></h3>
+                        <p>ウイルス対策、EDR、サンドボックス</p>
+                        <div class="toc-meta">
+                            <span class="difficulty normal">標準</span>
+                            <span class="study-time">25分</span>
+                        </div>
+                    </div>
+                    
+                    <div class="toc-item">
+                        <h3><a href="#monitoring-logging">6. 監視・ログ管理</a></h3>
+                        <p>セキュリティ監視とログ分析技術</p>
+                        <div class="toc-meta">
+                            <span class="difficulty normal">標準</span>
+                            <span class="study-time">25分</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Study content -->
+        <div class="study-content">
+            <!-- Section 1: Cryptography -->
+            <section id="cryptography" class="content-section" aria-labelledby="crypto-title">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 id="crypto-title" class="section-title">
+                            <span class="section-number">1</span>
+                            暗号化技術
+                        </h2>
+                        <div class="section-meta">
+                            <span class="difficulty hard">応用</span>
+                            <span class="study-time">⏱️ 40分</span>
+                            <span class="importance high">★★★</span>
+                        </div>
+                    </div>
+
+                    <div class="content-body">
+                        <div class="concept-intro">
+                            <h3>概要</h3>
+                            <p>暗号化技術は、情報の機密性と完全性を保護するための基盤技術です。現代の情報システムに不可欠な要素となっています。</p>
+                        </div>
+
+                        <div class="crypto-types">
+                            <h3>🔑 暗号化の種類</h3>
+                            
+                            <div class="crypto-category symmetric">
+                                <h4>共通鍵暗号（対称暗号）</h4>
+                                <div class="crypto-details">
+                                    <div class="characteristics">
+                                        <p><strong>特徴：</strong>暗号化と復号に同じ鍵を使用</p>
+                                        <p><strong>メリット：</strong>高速処理、計算量が少ない</p>
+                                        <p><strong>デメリット：</strong>鍵の配送・管理が困難</p>
+                                    </div>
+                                    
+                                    <div class="algorithms">
+                                        <h5>主要アルゴリズム</h5>
+                                        <ul>
+                                            <li><strong>AES：</strong>最も広く使用される現代の標準</li>
+                                            <li><strong>DES：</strong>古い標準（現在は非推奨）</li>
+                                            <li><strong>3DES：</strong>DESを3回適用（段階的廃止予定）</li>
+                                            <li><strong>ChaCha20：</strong>軽量で高速な暗号</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="crypto-category asymmetric">
+                                <h4>公開鍵暗号（非対称暗号）</h4>
+                                <div class="crypto-details">
+                                    <div class="characteristics">
+                                        <p><strong>特徴：</strong>暗号化と復号に異なる鍵を使用</p>
+                                        <p><strong>メリット：</strong>鍵配送問題の解決、デジタル署名</p>
+                                        <p><strong>デメリット：</strong>処理速度が遅い、計算量が大きい</p>
+                                    </div>
+                                    
+                                    <div class="algorithms">
+                                        <h5>主要アルゴリズム</h5>
+                                        <ul>
+                                            <li><strong>RSA：</strong>最も普及している公開鍵暗号</li>
+                                            <li><strong>ECC：</strong>楕円曲線暗号（高効率）</li>
+                                            <li><strong>Diffie-Hellman：</strong>鍵交換プロトコル</li>
+                                            <li><strong>DSA：</strong>デジタル署名アルゴリズム</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hash-functions">
+                            <h3>🔍 ハッシュ関数</h3>
+                            <div class="hash-content">
+                                <p><strong>目的：</strong>データの完全性検証、パスワード保存、デジタル署名</p>
+                                
+                                <div class="hash-properties">
+                                    <h4>重要な性質</h4>
+                                    <div class="properties-grid">
+                                        <div class="property">
+                                            <h5>一方向性</h5>
+                                            <p>ハッシュ値から元のデータを復元することは計算上困難</p>
+                                        </div>
+                                        <div class="property">
+                                            <h5>決定性</h5>
+                                            <p>同じ入力からは常に同じハッシュ値が生成される</p>
+                                        </div>
+                                        <div class="property">
+                                            <h5>雪崩効果</h5>
+                                            <p>入力の微小な変化が出力を大きく変える</p>
+                                        </div>
+                                        <div class="property">
+                                            <h5>衝突耐性</h5>
+                                            <p>異なる入力から同じハッシュ値を生成することは困難</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="hash-algorithms">
+                                    <h4>主要アルゴリズム</h4>
+                                    <ul>
+                                        <li><strong>SHA-256：</strong>現在の標準（SHA-2ファミリー）</li>
+                                        <li><strong>SHA-3：</strong>最新の標準</li>
+                                        <li><strong>MD5：</strong>古い標準（現在は非推奨）</li>
+                                        <li><strong>SHA-1：</strong>古い標準（段階的廃止）</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hybrid-cryptosystem">
+                            <h3>🔄 ハイブリッド暗号方式</h3>
+                            <div class="hybrid-explanation">
+                                <p>実際のシステムでは、共通鍵暗号と公開鍵暗号を組み合わせて使用します。</p>
+                                
+                                <div class="process-steps">
+                                    <div class="step">
+                                        <span class="step-number">1</span>
+                                        <p>共通鍵でデータを暗号化（高速）</p>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">2</span>
+                                        <p>公開鍵で共通鍵を暗号化（安全）</p>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">3</span>
+                                        <p>両方を送信</p>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">4</span>
+                                        <p>受信者は秘密鍵で共通鍵を復号</p>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">5</span>
+                                        <p>共通鍵でデータを復号</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="exam-tips">
+                            <h3>📝 試験対策</h3>
+                            <div class="tips-content">
+                                <p><strong>頻出ポイント：</strong></p>
+                                <ul>
+                                    <li>共通鍵暗号と公開鍵暗号の違いと特徴</li>
+                                    <li>ハッシュ関数の性質と用途</li>
+                                    <li>ハイブリッド暗号方式の仕組み</li>
+                                    <li>各暗号アルゴリズムの強度と用途</li>
+                                </ul>
+                                
+                                <p><strong>覚え方：</strong></p>
+                                <p>共通鍵は「高速」、公開鍵は「安全」、ハッシュは「検証」</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Authentication -->
+            <section id="authentication" class="content-section" aria-labelledby="auth-title">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 id="auth-title" class="section-title">
+                            <span class="section-number">2</span>
+                            認証技術
+                        </h2>
+                        <div class="section-meta">
+                            <span class="difficulty normal">標準</span>
+                            <span class="study-time">⏱️ 35分</span>
+                            <span class="importance high">★★★</span>
+                        </div>
+                    </div>
+
+                    <div class="content-body">
+                        <div class="concept-intro">
+                            <h3>概要</h3>
+                            <p>認証技術は、ユーザーやシステムの身元を確認し、適切なアクセス権限を付与するための重要な技術です。</p>
+                        </div>
+
+                        <div class="authentication-factors">
+                            <h3>🔐 認証の三要素</h3>
+                            <div class="factors-grid">
+                                <div class="factor knowledge">
+                                    <h4>知識要素（Something you know）</h4>
+                                    <div class="factor-icon">🧠</div>
+                                    <ul>
+                                        <li>パスワード</li>
+                                        <li>PIN（暗証番号）</li>
+                                        <li>秘密の質問</li>
+                                        <li>パスフレーズ</li>
+                                    </ul>
+                                    <p><strong>特徴：</strong>最も一般的だが、漏洩や推測のリスクがある</p>
+                                </div>
+                                
+                                <div class="factor possession">
+                                    <h4>所有要素（Something you have）</h4>
+                                    <div class="factor-icon">📱</div>
+                                    <ul>
+                                        <li>ICカード</li>
+                                        <li>トークン</li>
+                                        <li>スマートフォン</li>
+                                        <li>USB鍵</li>
+                                    </ul>
+                                    <p><strong>特徴：</strong>物理的な所有物、紛失・盗難のリスクがある</p>
+                                </div>
+                                
+                                <div class="factor inherence">
+                                    <h4>生体要素（Something you are）</h4>
+                                    <div class="factor-icon">👁️</div>
+                                    <ul>
+                                        <li>指紋</li>
+                                        <li>虹彩</li>
+                                        <li>顔認証</li>
+                                        <li>音声</li>
+                                    </ul>
+                                    <p><strong>特徴：</strong>変更不可、偽造困難だが、プライバシーの懸念</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mfa-section">
+                            <h3>🔒 多要素認証（MFA）</h3>
+                            <div class="mfa-content">
+                                <p>複数の認証要素を組み合わせることで、セキュリティを大幅に向上させます。</p>
+                                
+                                <div class="mfa-types">
+                                    <div class="mfa-type">
+                                        <h4>二要素認証（2FA）</h4>
+                                        <p>2つの異なる要素を組み合わせる最も一般的な形式</p>
+                                        <div class="examples">
+                                            <p><strong>例：</strong>パスワード + SMS、パスワード + アプリ通知</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mfa-type">
+                                        <h4>三要素認証（3FA）</h4>
+                                        <p>三つすべての要素を使用する最高レベルのセキュリティ</p>
+                                        <div class="examples">
+                                            <p><strong>例：</strong>パスワード + ICカード + 指紋</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="digital-signature">
+                            <h3>✍️ デジタル署名</h3>
+                            <div class="signature-content">
+                                <p>公開鍵暗号とハッシュ関数を組み合わせて、文書の完全性と送信者の真正性を保証する技術です。</p>
+                                
+                                <div class="signature-process">
+                                    <h4>署名作成プロセス</h4>
+                                    <div class="process-steps">
+                                        <div class="step">
+                                            <span class="step-number">1</span>
+                                            <p>文書のハッシュ値を計算</p>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-number">2</span>
+                                            <p>送信者の秘密鍵でハッシュ値を暗号化</p>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-number">3</span>
+                                            <p>暗号化されたハッシュ値をデジタル署名として添付</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <h4>署名検証プロセス</h4>
+                                    <div class="process-steps">
+                                        <div class="step">
+                                            <span class="step-number">1</span>
+                                            <p>送信者の公開鍵で署名を復号</p>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-number">2</span>
+                                            <p>文書のハッシュ値を計算</p>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-number">3</span>
+                                            <p>復号したハッシュ値と計算したハッシュ値を比較</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pki-section">
+                            <h3>🏛️ PKI（公開鍵基盤）</h3>
+                            <div class="pki-content">
+                                <p>公開鍵暗号を安全に運用するための包括的なシステム</p>
+                                
+                                <div class="pki-components">
+                                    <div class="component">
+                                        <h4>CA（認証局）</h4>
+                                        <p>デジタル証明書を発行・管理する信頼できる第三者機関</p>
+                                    </div>
+                                    <div class="component">
+                                        <h4>RA（登録局）</h4>
+                                        <p>証明書の申請受付と身元確認を行う</p>
+                                    </div>
+                                    <div class="component">
+                                        <h4>デジタル証明書</h4>
+                                        <p>公開鍵と所有者の身元を結びつける電子的な証明書</p>
+                                    </div>
+                                    <div class="component">
+                                        <h4>CRL/OCSP</h4>
+                                        <p>失効した証明書の情報を提供するサービス</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="exam-tips">
+                            <h3>📝 試験対策</h3>
+                            <div class="tips-content">
+                                <p><strong>重要ポイント：</strong></p>
+                                <ul>
+                                    <li>認証の三要素の分類と具体例</li>
+                                    <li>多要素認証の効果と実装方法</li>
+                                    <li>デジタル署名の仕組みと目的</li>
+                                    <li>PKIの構成要素と役割</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Study tools and actions -->
+            <section class="study-tools" aria-labelledby="tools-title">
+                <div class="container">
+                    <h2 id="tools-title">学習サポート</h2>
+                    <div class="tools-grid">
+                        <div class="tool-item">
+                            <div class="tool-icon">📝</div>
+                            <h3>学習ノート</h3>
+                            <p>重要なポイントをメモして復習に活用</p>
+                            <button class="btn btn-outline" id="open-notes">ノートを開く</button>
+                        </div>
+                        
+                        <div class="tool-item">
+                            <div class="tool-icon">🎯</div>
+                            <h3>練習問題</h3>
+                            <p>技術要素の理解度を確認</p>
+                            <a href="../../practice/category/?category=technology" class="btn btn-primary">問題を解く</a>
+                        </div>
+                        
+                        <div class="tool-item">
+                            <div class="tool-icon">🔍</div>
+                            <h3>用語検索</h3>
+                            <p>わからない用語をすぐに調べる</p>
+                            <a href="../../glossary/" class="btn btn-outline">用語集へ</a>
+                        </div>
+                        
+                        <div class="tool-item">
+                            <div class="tool-icon">📊</div>
+                            <h3>学習進捗</h3>
+                            <p>技術要素の習得状況を確認</p>
+                            <a href="../../progress/" class="btn btn-outline">進捗を見る</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Navigation to next section -->
+        <section class="content-navigation">
+            <div class="container">
+                <div class="nav-buttons">
+                    <a href="../management/" class="btn btn-outline nav-btn prev">
+                        ← 管理要素
+                    </a>
+                    <a href="../laws/" class="btn btn-primary nav-btn next">
+                        法規・制度 →
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Notes modal -->
+    <div class="modal" id="notes-modal" aria-hidden="true" role="dialog" aria-labelledby="notes-title">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="notes-title">学習ノート - 技術要素</h3>
+                <button class="modal-close" aria-label="ノートを閉じる">×</button>
+            </div>
+            <div class="modal-body">
+                <textarea id="study-notes" placeholder="ここに重要なポイントや疑問点をメモしてください...
+
+例：
+- 暗号化：共通鍵（高速）、公開鍵（安全）、ハッシュ（検証）
+- 認証三要素：知識、所有、生体
+- デジタル署名 = ハッシュ + 秘密鍵暗号化
+- PKI構成：CA、RA、証明書、CRL/OCSP"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" id="clear-notes">クリア</button>
+                <button class="btn btn-primary" id="save-notes">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>学習コンテンツ</h3>
+                    <ul>
+                        <li><a href="../basics/">基礎知識</a></li>
+                        <li><a href="../management/">管理要素</a></li>
+                        <li><a href="./">技術要素</a></li>
+                        <li><a href="../laws/">法規・制度</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>問題演習</h3>
+                    <ul>
+                        <li><a href="../../practice/category/">分野別問題</a></li>
+                        <li><a href="../../practice/mock-exam/">模擬試験</a></li>
+                        <li><a href="../../practice/review/">復習問題</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="../../exam-info/">試験情報</a></li>
+                        <li><a href="../../glossary/">用語集</a></li>
+                        <li><a href="../../tips/">合格体験談</a></li>
+                        <li><a href="../../progress/">学習進捗</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>このサイトについて</h3>
+                    <p>情報セキュリティマネジメント試験（SG）の合格を支援する学習プラットフォームです。</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 情報セキュリティマネジメント試験学習サイト. All rights reserved.</p>
+                <p class="footer-note">
+                    ※このサイトはIPA（情報処理推進機構）とは関係ありません。学習支援を目的とした非公式サイトです。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/storage.js"></script>
+    <script src="../../assets/js/progress.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <!-- Study page specific script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize study page
+            initStudyPage();
+            
+            // Load notes
+            loadStudyNotes();
+            
+            // Track study time
+            const startTime = Date.now();
+            
+            // Record study session when leaving
+            window.addEventListener('beforeunload', function() {
+                const studyTime = Date.now() - startTime;
+                if (window.ProgressTracker && studyTime > 10000) {
+                    window.ProgressTracker.recordStudySession(studyTime, 'technology', ['cryptography', 'authentication', 'network-security', 'access-control', 'malware-protection', 'monitoring']);
+                }
+            });
+        });
+
+        function initStudyPage() {
+            // Bookmark functionality
+            const bookmarkBtn = document.getElementById('bookmark-page');
+            if (bookmarkBtn && window.StorageManager) {
+                const isBookmarked = window.StorageManager.getBookmarks().some(b => b.pageId === 'study-technology');
+                updateBookmarkButton(bookmarkBtn, isBookmarked);
+                
+                bookmarkBtn.addEventListener('click', function() {
+                    const isCurrentlyBookmarked = this.classList.contains('bookmarked');
+                    window.StorageManager.toggleBookmark(
+                        'study-technology',
+                        '技術要素 - 情報セキュリティマネジメント試験',
+                        window.location.pathname
+                    );
+                    updateBookmarkButton(this, !isCurrentlyBookmarked);
+                });
+            }
+
+            // Notes modal
+            initNotesModal();
+            
+            // Progress tracking
+            updateProgressDisplay();
+            
+            // Section completion tracking
+            trackSectionProgress();
+        }
+
+        function updateBookmarkButton(button, isBookmarked) {
+            if (isBookmarked) {
+                button.classList.add('bookmarked');
+                button.innerHTML = '🔖 ブックマーク済み';
+                button.title = 'ブックマークを削除';
+            } else {
+                button.classList.remove('bookmarked');
+                button.innerHTML = '🔖 ブックマーク';
+                button.title = 'ページをブックマーク';
+            }
+        }
+
+        function initNotesModal() {
+            const modal = document.getElementById('notes-modal');
+            const openBtn = document.getElementById('open-notes');
+            const closeBtn = modal.querySelector('.modal-close');
+            const overlay = modal.querySelector('.modal-overlay');
+            const saveBtn = document.getElementById('save-notes');
+            const clearBtn = document.getElementById('clear-notes');
+            const textarea = document.getElementById('study-notes');
+
+            openBtn.addEventListener('click', () => openModal(modal));
+            closeBtn.addEventListener('click', () => closeModal(modal));
+            overlay.addEventListener('click', () => closeModal(modal));
+            
+            saveBtn.addEventListener('click', () => {
+                saveStudyNotes(textarea.value);
+                closeModal(modal);
+                showNotification('ノートを保存しました', 'success');
+            });
+            
+            clearBtn.addEventListener('click', () => {
+                if (confirm('ノートの内容をクリアしますか？')) {
+                    textarea.value = '';
+                }
+            });
+        }
+
+        function openModal(modal) {
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            
+            // Focus on textarea
+            const textarea = modal.querySelector('textarea');
+            if (textarea) textarea.focus();
+        }
+
+        function closeModal(modal) {
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        function loadStudyNotes() {
+            if (window.StorageManager) {
+                const notes = window.StorageManager.getNote('study-technology');
+                if (notes) {
+                    document.getElementById('study-notes').value = notes.text;
+                }
+            }
+        }
+
+        function saveStudyNotes(noteText) {
+            if (window.StorageManager) {
+                window.StorageManager.saveNote('study-technology', noteText);
+            }
+        }
+
+        function updateProgressDisplay() {
+            if (window.StorageManager) {
+                const studyData = window.StorageManager.getStudyData();
+                const progress = studyData.progress?.technology || 0;
+                
+                const progressValue = document.getElementById('technology-progress');
+                const progressBar = document.getElementById('technology-progress-bar');
+                
+                if (progressValue) progressValue.textContent = `${progress}%`;
+                if (progressBar) progressBar.style.width = `${progress}%`;
+            }
+        }
+
+        function trackSectionProgress() {
+            // Track which sections have been viewed
+            const sections = document.querySelectorAll('.content-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                        const sectionId = entry.target.id;
+                        markSectionViewed(sectionId);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            sections.forEach(section => observer.observe(section));
+        }
+
+        function markSectionViewed(sectionId) {
+            if (window.StorageManager) {
+                const studyData = window.StorageManager.getStudyData();
+                if (!studyData.viewedSections) studyData.viewedSections = {};
+                if (!studyData.viewedSections.technology) studyData.viewedSections.technology = [];
+                
+                if (!studyData.viewedSections.technology.includes(sectionId)) {
+                    studyData.viewedSections.technology.push(sectionId);
+                    window.StorageManager.updateStudyData({ viewedSections: studyData.viewedSections });
+                    
+                    // Update progress
+                    const totalSections = 6; // cryptography, authentication, network-security, access-control, malware, monitoring
+                    const viewedSections = studyData.viewedSections.technology.length;
+                    const newProgress = Math.min(100, Math.round((viewedSections / totalSections) * 100));
+                    
+                    if (newProgress > (studyData.progress?.technology || 0)) {
+                        studyData.progress = studyData.progress || {};
+                        studyData.progress.technology = newProgress;
+                        window.StorageManager.updateStudyData({ progress: studyData.progress });
+                        updateProgressDisplay();
+                    }
+                }
+            }
+        }
+
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
