@@ -1,3 +1,4 @@
+// @charset "UTF-8";
 /**
  * Service Worker for Information Security Management Study Site
  * Provides offline functionality and caching for PWA features
