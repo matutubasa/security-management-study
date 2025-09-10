@@ -1,0 +1,378 @@
+@charset "UTF-8";
+/* ==========================================================================
+   Themes and Dark Mode for Information Security Management Study Site
+   ========================================================================== */
+
+/* Dark theme color variables */
+:root[data-theme="dark"] {
+  /* Dark mode colors */
+  --primary-color: #64b5f6;
+  --primary-light: #90caf9;
+  --primary-dark: #1976d2;
+  --secondary-color: #e0e0e0;
+  --secondary-light: #f5f5f5;
+  --secondary-dark: #ffffff;
+  
+  /* Accent colors for dark mode */
+  --success-color: #66bb6a;
+  --warning-color: #ffb74d;
+  --error-color: #ef5350;
+  --info-color: #42a5f5;
+  
+  /* Dark mode neutral colors */
+  --white: #121212;
+  --light-gray: #1e1e1e;
+  --medium-gray: #2d2d2d;
+  --dark-gray: #e0e0e0;
+  --black: #ffffff;
+  
+  /* Dark mode specific shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Auto dark mode based on system preference */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    /* Apply dark theme colors automatically */
+    --primary-color: #64b5f6;
+    --primary-light: #90caf9;
+    --primary-dark: #1976d2;
+    --secondary-color: #e0e0e0;
+    --secondary-light: #f5f5f5;
+    --secondary-dark: #ffffff;
+    
+    --success-color: #66bb6a;
+    --warning-color: #ffb74d;
+    --error-color: #ef5350;
+    --info-color: #42a5f5;
+    
+    --white: #121212;
+    --light-gray: #1e1e1e;
+    --medium-gray: #2d2d2d;
+    --dark-gray: #e0e0e0;
+    --black: #ffffff;
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Theme toggle button styling */
+.theme-toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-gray);
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  background-color: var(--medium-gray);
+  transform: scale(1.1);
+}
+
+.theme-icon {
+  font-size: var(--font-size-lg);
+  transition: all var(--transition-fast);
+}
+
+/* Light mode icon */
+:root:not([data-theme="dark"]) .theme-icon::before {
+  content: "🌙";
+}
+
+/* Dark mode icon */
+:root[data-theme="dark"] .theme-icon::before {
+  content: "☀️";
+}
+
+/* Auto mode icons based on system preference */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-icon::before {
+    content: "☀️";
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .theme-icon::before {
+    content: "🌙";
+  }
+}
+
+/* Dark mode specific component adjustments */
+:root[data-theme="dark"] .hero,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero {
+    background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
+  }
+}
+
+/* Dark mode form elements */
+:root[data-theme="dark"] .search-input,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .search-input {
+    background-color: var(--light-gray);
+    border-color: var(--medium-gray);
+    color: var(--black);
+  }
+  
+  :root:not([data-theme="light"]) .search-input::placeholder {
+    color: var(--dark-gray);
+    opacity: 0.7;
+  }
+}
+
+/* Dark mode navigation adjustments */
+:root[data-theme="dark"] .header,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .header {
+    border-bottom: 1px solid var(--medium-gray);
+  }
+}
+
+/* Dark mode dropdown menus */
+:root[data-theme="dark"] .dropdown-menu,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .dropdown-menu {
+    border: 1px solid var(--medium-gray);
+  }
+}
+
+/* Dark mode card adjustments */
+:root[data-theme="dark"] .feature-card:hover,
+:root[data-theme="dark"] .stat-card,
+:root[data-theme="dark"] .stats-chart,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .feature-card:hover,
+  :root:not([data-theme="light"]) .stat-card,
+  :root:not([data-theme="light"]) .stats-chart {
+    border: 1px solid var(--medium-gray);
+  }
+}
+
+/* High contrast theme */
+:root[data-theme="high-contrast"] {
+  --primary-color: #0066cc;
+  --primary-light: #3399ff;
+  --primary-dark: #004499;
+  --secondary-color: #000000;
+  --secondary-light: #333333;
+  --secondary-dark: #000000;
+  
+  --success-color: #00aa00;
+  --warning-color: #ff8800;
+  --error-color: #cc0000;
+  --info-color: #0066cc;
+  
+  --white: #ffffff;
+  --light-gray: #f0f0f0;
+  --medium-gray: #cccccc;
+  --dark-gray: #333333;
+  --black: #000000;
+}
+
+:root[data-theme="high-contrast"] * {
+  text-shadow: none;
+  box-shadow: none;
+}
+
+:root[data-theme="high-contrast"] .btn,
+:root[data-theme="high-contrast"] .nav-link,
+:root[data-theme="high-contrast"] .feature-card,
+:root[data-theme="high-contrast"] .stat-card {
+  border: 2px solid currentColor;
+}
+
+:root[data-theme="high-contrast"] .hero {
+  background: var(--primary-color);
+}
+
+/* Blue light filter theme (for eye strain reduction) */
+:root[data-theme="blue-light-filter"] {
+  filter: sepia(10%) saturate(90%) hue-rotate(-10deg);
+}
+
+:root[data-theme="blue-light-filter"] .hero {
+  background: linear-gradient(135deg, #8d6e63 0%, #a1887f 100%);
+}
+
+/* Theme transition animations */
+* {
+  transition: background-color var(--transition-normal),
+              color var(--transition-normal),
+              border-color var(--transition-normal);
+}
+
+/* Focus indicators for different themes */
+:root[data-theme="dark"] *:focus,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) *:focus {
+    outline-color: var(--primary-light);
+  }
+}
+
+:root[data-theme="high-contrast"] *:focus {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+/* Print mode adjustments */
+@media print {
+  :root {
+    --primary-color: #000000;
+    --primary-light: #333333;
+    --primary-dark: #000000;
+    --secondary-color: #666666;
+    --secondary-light: #999999;
+    --secondary-dark: #000000;
+    
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #666666;
+    --black: #000000;
+  }
+  
+  .theme-toggle {
+    display: none;
+  }
+}
+
+/* Reduced motion theme adjustments */
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition: none;
+  }
+  
+  .theme-icon {
+    transition: none;
+  }
+  
+  * {
+    transition: none !important;
+  }
+}
+
+/* Color blindness friendly adjustments */
+:root[data-theme="colorblind-friendly"] {
+  --success-color: #0173b2;
+  --warning-color: #de8f05;
+  --error-color: #cc78bc;
+  --info-color: #029e73;
+}
+
+/* Large text theme for accessibility */
+:root[data-theme="large-text"] {
+  --font-size-xs: 1rem;
+  --font-size-sm: 1.125rem;
+  --font-size-base: 1.25rem;
+  --font-size-lg: 1.375rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.875rem;
+  --font-size-3xl: 2.25rem;
+  --font-size-4xl: 2.75rem;
+  --font-size-5xl: 3.5rem;
+}
+
+:root[data-theme="large-text"] .btn,
+:root[data-theme="large-text"] .nav-link {
+  padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+/* Theme persistence */
+.theme-transition {
+  transition: all var(--transition-slow);
+}
+
+/* Custom theme options */
+.theme-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.theme-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--white);
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-sm);
+  min-width: 200px;
+  z-index: var(--z-dropdown);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all var(--transition-fast);
+}
+
+.theme-selector:hover .theme-options,
+.theme-selector:focus-within .theme-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.theme-option {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  color: var(--secondary-dark);
+}
+
+.theme-option:hover,
+.theme-option:focus {
+  background-color: var(--light-gray);
+}
+
+.theme-option.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Theme-specific loading states */
+.theme-loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Animation for theme changes */
+@keyframes themeChange {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.theme-changing {
+  animation: themeChange 0.3s ease-in-out;
+}
+
+/* System theme detection indicator */
+.system-theme-indicator {
+  position: relative;
+}
+
+.system-theme-indicator::after {
+  content: "●";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  font-size: 8px;
+  color: var(--success-color);
+}

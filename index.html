@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="情報セキュリティマネジメント試験（SG）対策の総合学習サイト。過去問演習、分野別学習、進捗管理など充実の機能で合格をサポート。">
+    <meta name="keywords" content="情報セキュリティマネジメント試験,SG試験,IPA,情報処理技術者試験,セキュリティ,学習,対策">
+    <title>情報セキュリティマネジメント試験 学習サイト | SG試験対策</title>
+    
+    <!-- Google Fonts for Japanese support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="assets/js/main.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1976d2">
+    
+    <!-- Icons for various devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="情報セキュリティマネジメント試験 学習サイト">
+    <meta property="og:description" content="IPA情報セキュリティマネジメント試験（SG）の合格を目指す総合学習プラットフォーム">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/og-image.png">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
+    <!-- Header with navigation -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="メインナビゲーション">
+            <div class="nav-brand">
+                <a href="/" class="brand-link" aria-label="ホームページへ戻る">
+                    <img src="assets/images/logo.svg" alt="SG試験学習サイト" class="brand-logo">
+                    <span class="brand-text">SG試験学習サイト</span>
+                </a>
+            </div>
+            
+            <!-- Mobile menu toggle -->
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="ナビゲーションメニューを開く">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <!-- Navigation menu -->
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="/" class="nav-link active" role="menuitem" aria-current="page">ホーム</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="exam-info/" class="nav-link" role="menuitem">試験情報</a>
+                </li>
+                <li class="nav-item nav-dropdown" role="none">
+                    <a href="study/" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">学習コンテンツ</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="study/basics/" role="menuitem">基礎知識</a></li>
+                        <li><a href="study/management/" role="menuitem">管理要素</a></li>
+                        <li><a href="study/technology/" role="menuitem">技術要素</a></li>
+                        <li><a href="study/laws/" role="menuitem">法規・制度</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-dropdown" role="none">
+                    <a href="practice/" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">問題演習</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="practice/category/" role="menuitem">分野別問題</a></li>
+                        <li><a href="practice/mock-exam/" role="menuitem">模擬試験</a></li>
+                        <li><a href="practice/review/" role="menuitem">復習問題</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="glossary/" class="nav-link" role="menuitem">用語集</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="progress/" class="nav-link" role="menuitem">学習進捗</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="tips/" class="nav-link" role="menuitem">合格体験談</a>
+                </li>
+            </ul>
+            
+            <!-- Theme toggle and other utilities -->
+            <div class="nav-utilities">
+                <button class="theme-toggle" aria-label="ダークモード切り替え" title="ダークモード切り替え">
+                    <span class="theme-icon"></span>
+                </button>
+                <button class="search-toggle" aria-label="検索を開く" title="検索">
+                    <span class="search-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- Hero section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title">
+                        情報セキュリティマネジメント試験<br>
+                        <span class="hero-subtitle">合格への最短ルート</span>
+                    </h1>
+                    <p class="hero-description">
+                        IPA実施の情報セキュリティマネジメント試験（SG）の合格を目指す学習者のための総合プラットフォーム。
+                        体系的な学習コンテンツと実践的な問題演習で効率的に合格力を身につけましょう。
+                    </p>
+                    <div class="hero-actions">
+                        <a href="practice/mock-exam/" class="btn btn-primary btn-large">
+                            <span class="btn-icon">📝</span>
+                            模擬試験にチャレンジ
+                        </a>
+                        <a href="study/" class="btn btn-secondary btn-large">
+                            <span class="btn-icon">📚</span>
+                            学習を始める
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">60</div>
+                            <div class="stat-label">問題数</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">120</div>
+                            <div class="stat-label">分（試験時間）</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">600</div>
+                            <div class="stat-label">点以上で合格</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features section -->
+        <section class="features" aria-labelledby="features-title">
+            <div class="container">
+                <h2 id="features-title" class="section-title">学習サイトの特徴</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3 class="feature-title">体系的な学習コンテンツ</h3>
+                        <p class="feature-description">
+                            IPAシラバスに完全準拠した分野別学習コンテンツ。基礎から応用まで段階的に学習できます。
+                        </p>
+                        <a href="study/" class="feature-link">学習コンテンツを見る</a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3 class="feature-title">実践的な問題演習</h3>
+                        <p class="feature-description">
+                            本番と同じ形式の60問模擬試験と分野別問題で実力を確実に身につけられます。
+                        </p>
+                        <a href="practice/" class="feature-link">問題演習を始める</a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h3 class="feature-title">詳細な進捗管理</h3>
+                        <p class="feature-description">
+                            学習時間や正答率を可視化。弱点分野を特定して効率的な学習計画を立てられます。
+                        </p>
+                        <a href="progress/" class="feature-link">進捗を確認する</a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3 class="feature-title">どこでも学習可能</h3>
+                        <p class="feature-description">
+                            スマートフォン・タブレット完全対応。オフライン機能でいつでもどこでも学習できます。
+                        </p>
+                        <a href="#pwa-info" class="feature-link">詳しく見る</a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3 class="feature-title">充実の用語集</h3>
+                        <p class="feature-description">
+                            試験に頻出する重要用語を網羅。検索機能付きで必要な情報をすぐに見つけられます。
+                        </p>
+                        <a href="glossary/" class="feature-link">用語集を見る</a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h3 class="feature-title">合格のコツ</h3>
+                        <p class="feature-description">
+                            合格者の体験談や効率的な学習方法、試験当日のコツまで実践的なアドバイス。
+                        </p>
+                        <a href="tips/" class="feature-link">体験談を読む</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick start section -->
+        <section class="quick-start" aria-labelledby="quickstart-title">
+            <div class="container">
+                <h2 id="quickstart-title" class="section-title">今すぐ始める</h2>
+                <div class="quickstart-grid">
+                    <div class="quickstart-item">
+                        <div class="quickstart-step">1</div>
+                        <h3>試験情報を確認</h3>
+                        <p>まずは試験の概要や申込方法を確認しましょう</p>
+                        <a href="exam-info/" class="btn btn-outline">試験情報</a>
+                    </div>
+                    
+                    <div class="quickstart-item">
+                        <div class="quickstart-step">2</div>
+                        <h3>基礎知識を学習</h3>
+                        <p>情報セキュリティの基本概念から始めましょう</p>
+                        <a href="study/basics/" class="btn btn-outline">基礎学習</a>
+                    </div>
+                    
+                    <div class="quickstart-item">
+                        <div class="quickstart-step">3</div>
+                        <h3>問題演習で実践</h3>
+                        <p>知識を定着させるために問題を解いてみましょう</p>
+                        <a href="practice/category/" class="btn btn-outline">問題演習</a>
+                    </div>
+                    
+                    <div class="quickstart-item">
+                        <div class="quickstart-step">4</div>
+                        <h3>模擬試験で腕試し</h3>
+                        <p>本番形式の模擬試験で実力をチェック</p>
+                        <a href="practice/mock-exam/" class="btn btn-outline">模擬試験</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Study statistics -->
+        <section class="study-stats" aria-labelledby="stats-title">
+            <div class="container">
+                <h2 id="stats-title" class="section-title">あなたの学習状況</h2>
+                <div class="stats-container" id="study-statistics">
+                    <div class="stat-card">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-value" id="total-study-time">0時間</div>
+                        <div class="stat-label">総学習時間</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-value" id="total-questions">0問</div>
+                        <div class="stat-label">解答問題数</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-value" id="accuracy-rate">-%</div>
+                        <div class="stat-label">正答率</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">📅</div>
+                        <div class="stat-value" id="study-days">0日</div>
+                        <div class="stat-label">継続日数</div>
+                    </div>
+                </div>
+                
+                <div class="stats-chart">
+                    <h3>分野別習得度</h3>
+                    <div class="progress-bars" id="category-progress">
+                        <div class="progress-item">
+                            <span class="progress-label">基礎知識</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-value">0%</span>
+                        </div>
+                        <div class="progress-item">
+                            <span class="progress-label">管理要素</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-value">0%</span>
+                        </div>
+                        <div class="progress-item">
+                            <span class="progress-label">技術要素</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-value">0%</span>
+                        </div>
+                        <div class="progress-item">
+                            <span class="progress-label">法規・制度</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-value">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>学習コンテンツ</h3>
+                    <ul>
+                        <li><a href="study/basics/">基礎知識</a></li>
+                        <li><a href="study/management/">管理要素</a></li>
+                        <li><a href="study/technology/">技術要素</a></li>
+                        <li><a href="study/laws/">法規・制度</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>問題演習</h3>
+                    <ul>
+                        <li><a href="practice/category/">分野別問題</a></li>
+                        <li><a href="practice/mock-exam/">模擬試験</a></li>
+                        <li><a href="practice/review/">復習問題</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="exam-info/">試験情報</a></li>
+                        <li><a href="glossary/">用語集</a></li>
+                        <li><a href="tips/">合格体験談</a></li>
+                        <li><a href="progress/">学習進捗</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>このサイトについて</h3>
+                    <p>情報セキュリティマネジメント試験（SG）の合格を支援する学習プラットフォームです。</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="GitHub" class="social-link">
+                            <span class="social-icon">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 情報セキュリティマネジメント試験学習サイト. All rights reserved.</p>
+                <p class="footer-note">
+                    ※このサイトはIPA（情報処理推進機構）とは関係ありません。学習支援を目的とした非公式サイトです。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search overlay -->
+    <div class="search-overlay" id="search-overlay" role="dialog" aria-labelledby="search-title" aria-hidden="true">
+        <div class="search-container">
+            <h2 id="search-title" class="search-title">サイト内検索</h2>
+            <div class="search-form">
+                <input type="search" id="search-input" class="search-input" placeholder="キーワードを入力..." aria-label="検索キーワード">
+                <button type="button" class="search-btn" aria-label="検索実行">🔍</button>
+                <button type="button" class="search-close" aria-label="検索を閉じる">✕</button>
+            </div>
+            <div class="search-results" id="search-results" aria-live="polite"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/progress.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Service Worker for PWA -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="情報セキュリティマネジメント試験（SG）の本番形式模擬試験。60問120分で実力をチェック。">
+    <meta name="keywords" content="模擬試験,本番形式,60問,120分,実力テスト,SG試験">
+    <title>模擬試験 | 情報セキュリティマネジメント試験 学習サイト</title>
+    
+    <!-- Google Fonts for Japanese support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/themes.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#1976d2">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
+    <!-- Header with navigation -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="メインナビゲーション">
+            <div class="nav-brand">
+                <a href="../../" class="brand-link" aria-label="ホームページへ戻る">
+                    <img src="../../assets/images/logo.svg" alt="SG試験学習サイト" class="brand-logo">
+                    <span class="brand-text">SG試験学習サイト</span>
+                </a>
+            </div>
+            
+            <!-- Mobile menu toggle -->
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="ナビゲーションメニューを開く">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <!-- Navigation menu -->
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="../../" class="nav-link" role="menuitem">ホーム</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../exam-info/" class="nav-link" role="menuitem">試験情報</a>
+                </li>
+                <li class="nav-item nav-dropdown" role="none">
+                    <a href="../../study/" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">学習コンテンツ</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="../../study/basics/" role="menuitem">基礎知識</a></li>
+                        <li><a href="../../study/management/" role="menuitem">管理要素</a></li>
+                        <li><a href="../../study/technology/" role="menuitem">技術要素</a></li>
+                        <li><a href="../../study/laws/" role="menuitem">法規・制度</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-dropdown active" role="none">
+                    <a href="../" class="nav-link active" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-current="page">問題演習</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="../category/" role="menuitem">分野別問題</a></li>
+                        <li><a href="./" role="menuitem" class="active">模擬試験</a></li>
+                        <li><a href="../review/" role="menuitem">復習問題</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../glossary/" class="nav-link" role="menuitem">用語集</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../progress/" class="nav-link" role="menuitem">学習進捗</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../../tips/" class="nav-link" role="menuitem">合格体験談</a>
+                </li>
+            </ul>
+            
+            <!-- Theme toggle and other utilities -->
+            <div class="nav-utilities">
+                <button class="theme-toggle" aria-label="ダークモード切り替え" title="ダークモード切り替え">
+                    <span class="theme-icon"></span>
+                </button>
+                <button class="search-toggle" aria-label="検索を開く" title="検索">
+                    <span class="search-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- Quiz container (hidden initially) -->
+        <div id="quiz-container" class="quiz-container" style="display: none;">
+            <!-- Quiz content will be inserted here by JavaScript -->
+        </div>
+
+        <!-- Mock exam introduction (shown initially) -->
+        <div id="mock-exam-intro" class="mock-exam-intro">
+            <!-- Page header -->
+            <section class="page-header">
+                <div class="container">
+                    <nav aria-label="パンくずリスト" class="breadcrumb">
+                        <ol>
+                            <li><a href="../../">ホーム</a></li>
+                            <li><a href="../">問題演習</a></li>
+                            <li aria-current="page">模擬試験</li>
+                        </ol>
+                    </nav>
+                    
+                    <div class="page-header-content">
+                        <h1 class="page-title">
+                            <span class="page-icon">📝</span>
+                            模擬試験
+                        </h1>
+                        <p class="page-description">
+                            本番と同じ形式で実力をチェックしましょう。
+                            60問120分の試験で、あなたの現在の実力を正確に把握できます。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Exam info -->
+            <section class="exam-info">
+                <div class="container">
+                    <div class="exam-details">
+                        <h2>模擬試験について</h2>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <div class="detail-icon">📊</div>
+                                <h3>問題数</h3>
+                                <p>60問（四択式）</p>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">⏰</div>
+                                <h3>試験時間</h3>
+                                <p>120分</p>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">🎯</div>
+                                <h3>合格基準</h3>
+                                <p>600点以上（1000点満点）</p>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">📈</div>
+                                <h3>出題分野</h3>
+                                <p>全分野からバランス良く出題</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Past results -->
+            <section class="past-results" id="past-results">
+                <div class="container">
+                    <h2>過去の模擬試験結果</h2>
+                    <div id="results-list">
+                        <!-- Results will be populated by JavaScript -->
+                        <div class="no-results">
+                            <p>まだ模擬試験を受験していません。</p>
+                            <p>初回の模擬試験で現在の実力を確認しましょう！</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Start exam section -->
+            <section class="start-exam">
+                <div class="container">
+                    <div class="exam-start-card">
+                        <h2>模擬試験を開始</h2>
+                        <p>準備ができたら、下のボタンをクリックして模擬試験を開始してください。</p>
+                        
+                        <div class="exam-checklist">
+                            <h3>開始前のチェックリスト</h3>
+                            <ul>
+                                <li>✓ 静かな環境で集中できる状態</li>
+                                <li>✓ 120分の時間を確保</li>
+                                <li>✓ インターネット接続が安定</li>
+                                <li>✓ 筆記用具を準備（メモ用）</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="exam-actions">
+                            <button class="btn btn-primary btn-large start-quiz" data-category="all" data-type="mock">
+                                🚀 模擬試験を開始する
+                            </button>
+                            <a href="../category/" class="btn btn-outline">分野別問題で練習</a>
+                        </div>
+                        
+                        <div class="exam-note">
+                            <p><strong>注意:</strong> 模擬試験は一度開始すると途中で停止できません。時間に余裕があるときに受験してください。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>学習コンテンツ</h3>
+                    <ul>
+                        <li><a href="../../study/basics/">基礎知識</a></li>
+                        <li><a href="../../study/management/">管理要素</a></li>
+                        <li><a href="../../study/technology/">技術要素</a></li>
+                        <li><a href="../../study/laws/">法規・制度</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>問題演習</h3>
+                    <ul>
+                        <li><a href="../category/">分野別問題</a></li>
+                        <li><a href="./">模擬試験</a></li>
+                        <li><a href="../review/">復習問題</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="../../exam-info/">試験情報</a></li>
+                        <li><a href="../../glossary/">用語集</a></li>
+                        <li><a href="../../tips/">合格体験談</a></li>
+                        <li><a href="../../progress/">学習進捗</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>このサイトについて</h3>
+                    <p>情報セキュリティマネジメント試験（SG）の合格を支援する学習プラットフォームです。</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 情報セキュリティマネジメント試験学習サイト. All rights reserved.</p>
+                <p class="footer-note">
+                    ※このサイトはIPA（情報処理推進機構）とは関係ありません。学習支援を目的とした非公式サイトです。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/storage.js"></script>
+    <script src="../../assets/js/progress.js"></script>
+    <script src="../../assets/js/quiz.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPastResults();
+        });
+        
+        function loadPastResults() {
+            if (!window.StorageManager) return;
+            
+            const studyData = window.StorageManager.getStudyData();
+            const results = studyData.mockExamResults || [];
+            const resultsList = document.getElementById('results-list');
+            
+            if (results.length === 0) {
+                return; // Show default "no results" message
+            }
+            
+            // Sort by date (newest first)
+            results.sort((a, b) => b.completedAt - a.completedAt);
+            
+            const resultsHTML = results.slice(0, 5).map((result, index) => `
+                <div class="result-item ${result.passed ? 'passed' : 'failed'}">
+                    <div class="result-header">
+                        <h3>模擬試験 #${results.length - index}</h3>
+                        <div class="result-status ${result.passed ? 'passed' : 'failed'}">
+                            ${result.passed ? '合格' : '不合格'}
+                        </div>
+                    </div>
+                    <div class="result-details">
+                        <div class="result-score">
+                            <span class="score-number">${result.score}</span>
+                            <span class="score-label">点</span>
+                        </div>
+                        <div class="result-info">
+                            <p>正答率: ${Math.round((result.correctAnswers / result.totalQuestions) * 100)}%</p>
+                            <p>所要時間: ${Math.floor(result.timeSpent / 60000)}分</p>
+                            <p>受験日: ${new Date(result.completedAt).toLocaleDateString('ja-JP')}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            resultsList.innerHTML = resultsHTML;
+        }
+    </script>
+    
+    <style>
+        .exam-info {
+            background-color: var(--light-gray);
+            padding: var(--spacing-2xl) 0;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .detail-item {
+            background-color: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .detail-icon {
+            font-size: var(--font-size-3xl);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .detail-item h3 {
+            margin: 0 0 var(--spacing-sm) 0;
+            color: var(--primary-color);
+        }
+        
+        .past-results {
+            padding: var(--spacing-2xl) 0;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: var(--spacing-2xl);
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius-lg);
+        }
+        
+        .result-item {
+            background-color: var(--white);
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .result-item.passed {
+            border-left: 4px solid var(--success-color);
+        }
+        
+        .result-item.failed {
+            border-left: 4px solid var(--error-color);
+        }
+        
+        .result-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+        
+        .result-header h3 {
+            margin: 0;
+        }
+        
+        .result-status {
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius-sm);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .result-status.passed {
+            background-color: var(--success-color);
+            color: var(--white);
+        }
+        
+        .result-status.failed {
+            background-color: var(--error-color);
+            color: var(--white);
+        }
+        
+        .result-details {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+        }
+        
+        .result-score {
+            text-align: center;
+        }
+        
+        .score-number {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-color);
+        }
+        
+        .score-label {
+            font-size: var(--font-size-sm);
+            color: var(--dark-gray);
+        }
+        
+        .result-info p {
+            margin: 0;
+            font-size: var(--font-size-sm);
+            color: var(--dark-gray);
+        }
+        
+        .start-exam {
+            padding: var(--spacing-2xl) 0;
+        }
+        
+        .exam-start-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-2xl);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .exam-checklist {
+            background-color: var(--light-gray);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-md);
+            margin: var(--spacing-xl) 0;
+            text-align: left;
+        }
+        
+        .exam-checklist h3 {
+            margin-top: 0;
+            text-align: center;
+        }
+        
+        .exam-checklist ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .exam-checklist li {
+            margin-bottom: var(--spacing-sm);
+            color: var(--success-color);
+            font-weight: var(--font-weight-medium);
+        }
+        
+        .exam-actions {
+            margin: var(--spacing-xl) 0;
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .exam-note {
+            font-size: var(--font-size-sm);
+            color: var(--dark-gray);
+            margin-top: var(--spacing-lg);
+        }
+    </style>
+</body>
+</html>

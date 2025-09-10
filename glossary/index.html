@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="情報セキュリティマネジメント試験（SG）の重要用語集。試験に頻出する用語の意味や解説を検索可能。">
+    <meta name="keywords" content="用語集,用語辞書,情報セキュリティ,用語解説,SG試験">
+    <title>用語集 | 情報セキュリティマネジメント試験 学習サイト</title>
+    
+    <!-- Google Fonts for Japanese support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/themes.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#1976d2">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
+    <!-- Header with navigation -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="メインナビゲーション">
+            <div class="nav-brand">
+                <a href="../" class="brand-link" aria-label="ホームページへ戻る">
+                    <img src="../assets/images/logo.svg" alt="SG試験学習サイト" class="brand-logo">
+                    <span class="brand-text">SG試験学習サイト</span>
+                </a>
+            </div>
+            
+            <!-- Mobile menu toggle -->
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="ナビゲーションメニューを開く">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <!-- Navigation menu -->
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="../" class="nav-link" role="menuitem">ホーム</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../exam-info/" class="nav-link" role="menuitem">試験情報</a>
+                </li>
+                <li class="nav-item nav-dropdown" role="none">
+                    <a href="../study/" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">学習コンテンツ</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="../study/basics/" role="menuitem">基礎知識</a></li>
+                        <li><a href="../study/management/" role="menuitem">管理要素</a></li>
+                        <li><a href="../study/technology/" role="menuitem">技術要素</a></li>
+                        <li><a href="../study/laws/" role="menuitem">法規・制度</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-dropdown" role="none">
+                    <a href="../practice/" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">問題演習</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="../practice/category/" role="menuitem">分野別問題</a></li>
+                        <li><a href="../practice/mock-exam/" role="menuitem">模擬試験</a></li>
+                        <li><a href="../practice/review/" role="menuitem">復習問題</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="./" class="nav-link active" role="menuitem" aria-current="page">用語集</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../progress/" class="nav-link" role="menuitem">学習進捗</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="../tips/" class="nav-link" role="menuitem">合格体験談</a>
+                </li>
+            </ul>
+            
+            <!-- Theme toggle and other utilities -->
+            <div class="nav-utilities">
+                <button class="theme-toggle" aria-label="ダークモード切り替え" title="ダークモード切り替え">
+                    <span class="theme-icon"></span>
+                </button>
+                <button class="search-toggle" aria-label="検索を開く" title="検索">
+                    <span class="search-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- Page header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <h1 class="page-title">
+                        <span class="page-icon">🔍</span>
+                        用語集
+                    </h1>
+                    <p class="page-description">
+                        情報セキュリティマネジメント試験に頻出する重要用語を検索できます。
+                        学習中にわからない用語があったらすぐに調べましょう。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search section -->
+        <section class="glossary-search">
+            <div class="container">
+                <div class="search-form">
+                    <input type="search" id="glossary-search" placeholder="用語を検索..." aria-label="用語検索">
+                    <button type="button" class="search-btn">🔍</button>
+                </div>
+                <div class="search-filters">
+                    <button class="filter-btn active" data-category="all">すべて</button>
+                    <button class="filter-btn" data-category="basics">基礎</button>
+                    <button class="filter-btn" data-category="management">管理</button>
+                    <button class="filter-btn" data-category="technology">技術</button>
+                    <button class="filter-btn" data-category="laws">法規</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Glossary content -->
+        <section class="glossary-content">
+            <div class="container">
+                <div id="glossary-results">
+                    <!-- Sample terms -->
+                    <div class="term-item" data-category="basics">
+                        <h3 class="term-name">CIA</h3>
+                        <div class="term-category">基礎知識</div>
+                        <div class="term-definition">
+                            <p>情報セキュリティの三要素である機密性（Confidentiality）、完全性（Integrity）、可用性（Availability）の頭文字を取った略語。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="term-item" data-category="technology">
+                        <h3 class="term-name">暗号化</h3>
+                        <div class="term-category">技術要素</div>
+                        <div class="term-definition">
+                            <p>データを第三者には理解できない形に変換する技術。情報の機密性を保護するために使用される。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="term-item" data-category="basics">
+                        <h3 class="term-name">脆弱性</h3>
+                        <div class="term-category">基礎知識</div>
+                        <div class="term-definition">
+                            <p>情報システムの設計や実装における弱点や欠陥のこと。攻撃者に悪用される可能性がある。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="term-item" data-category="laws">
+                        <h3 class="term-name">個人情報保護法</h3>
+                        <div class="term-category">法規・制度</div>
+                        <div class="term-definition">
+                            <p>個人情報の適正な取り扱いに関して規定した法律。個人の権利利益を保護することを目的とする。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="coming-soon">
+                        <h2>🚧 包括的な用語集を準備中</h2>
+                        <p>より多くの用語と詳細な解説を含む用語集を開発中です。上記は代表的な用語の例です。</p>
+                        <a href="../study/" class="btn btn-primary">学習コンテンツで用語を学ぶ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>学習コンテンツ</h3>
+                    <ul>
+                        <li><a href="../study/basics/">基礎知識</a></li>
+                        <li><a href="../study/management/">管理要素</a></li>
+                        <li><a href="../study/technology/">技術要素</a></li>
+                        <li><a href="../study/laws/">法規・制度</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>問題演習</h3>
+                    <ul>
+                        <li><a href="../practice/category/">分野別問題</a></li>
+                        <li><a href="../practice/mock-exam/">模擬試験</a></li>
+                        <li><a href="../practice/review/">復習問題</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="../exam-info/">試験情報</a></li>
+                        <li><a href="./">用語集</a></li>
+                        <li><a href="../tips/">合格体験談</a></li>
+                        <li><a href="../progress/">学習進捗</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>このサイトについて</h3>
+                    <p>情報セキュリティマネジメント試験（SG）の合格を支援する学習プラットフォームです。</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 情報セキュリティマネジメント試験学習サイト. All rights reserved.</p>
+                <p class="footer-note">
+                    ※このサイトはIPA（情報処理推進機構）とは関係ありません。学習支援を目的とした非公式サイトです。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/storage.js"></script>
+    <script src="../assets/js/progress.js"></script>
+    <script src="../assets/js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initGlossary();
+        });
+        
+        function initGlossary() {
+            const searchInput = document.getElementById('glossary-search');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const termItems = document.querySelectorAll('.term-item');
+            
+            // Search functionality
+            searchInput.addEventListener('input', function() {
+                filterTerms();
+            });
+            
+            // Filter functionality
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    filterTerms();
+                });
+            });
+            
+            function filterTerms() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const activeCategory = document.querySelector('.filter-btn.active').dataset.category;
+                
+                termItems.forEach(item => {
+                    const name = item.querySelector('.term-name').textContent.toLowerCase();
+                    const definition = item.querySelector('.term-definition').textContent.toLowerCase();
+                    const category = item.dataset.category;
+                    
+                    const matchesSearch = name.includes(searchTerm) || definition.includes(searchTerm);
+                    const matchesCategory = activeCategory === 'all' || category === activeCategory;
+                    
+                    item.style.display = matchesSearch && matchesCategory ? 'block' : 'none';
+                });
+            }
+        }
+    </script>
+    
+    <style>
+        .glossary-search {
+            background-color: var(--light-gray);
+            padding: var(--spacing-xl) 0;
+        }
+        
+        .search-form {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto var(--spacing-lg);
+            gap: var(--spacing-sm);
+        }
+        
+        .search-form input {
+            flex: 1;
+            padding: var(--spacing-md);
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--border-radius-md);
+            font-size: var(--font-size-lg);
+        }
+        
+        .search-btn {
+            padding: var(--spacing-md);
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: var(--border-radius-md);
+            cursor: pointer;
+        }
+        
+        .search-filters {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background-color: var(--white);
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--border-radius-md);
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        
+        .glossary-content {
+            padding: var(--spacing-2xl) 0;
+        }
+        
+        .term-item {
+            background-color: var(--white);
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .term-name {
+            margin: 0 0 var(--spacing-sm) 0;
+            color: var(--primary-color);
+        }
+        
+        .term-category {
+            font-size: var(--font-size-sm);
+            color: var(--dark-gray);
+            margin-bottom: var(--spacing-md);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius-sm);
+            display: inline-block;
+        }
+        
+        .term-definition {
+            color: var(--secondary-dark);
+        }
+        
+        .coming-soon {
+            text-align: center;
+            padding: var(--spacing-2xl);
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius-lg);
+            margin-top: var(--spacing-xl);
+        }
+    </style>
+</body>
+</html>
